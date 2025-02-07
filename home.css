@@ -1,0 +1,654 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+   
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+        
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.header-title {
+    height: 120px;
+    max-width: 120%;
+    margin-right: -100px; 
+}
+ /* Angoli bianchi */
+ .corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    z-index: 1100; /* Sopra all'header */
+}
+
+.top-left {
+    top: 10px; /* Staccato dai bordi */
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.bottom-left {
+    bottom: 10px; /* Staccato dai bordi */
+    left: 10px;
+    border-right: none;
+    border-top: none;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.home-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 auto;
+    display: block; /* Assicura che l'immagine si comporti come un elemento block */
+
+}
+
+.archive-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 7px 12px;
+    border: 1px solid white; /* Solo la traccia */
+    border-radius: 5px;
+    font-size: 18px;
+    background: transparent; /* Rimuove il riempimento */
+}
+.arrow-icon {
+    width: 16px;
+    height: auto;
+    margin-left: 2px; /* Sposta l'icona a destra del testo */
+}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #FFC300;
+        }
+        
+        
+
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease-in-out;
+            z-index: 10; /* Assicura che rimanga visibile sopra altri elementi */
+        }
+
+        
+        
+        /* Wrapper per il testo e la copertina */
+        .intro-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 80vw;
+        }
+        .cover-image {
+            width: 400px; /* Aumentata la dimensione */
+            max-width: 40vw;
+            height: auto;
+        }
+        
+        
+        /* Testo SVG */
+        .text-svg {
+            width: 280px;
+            height: auto;
+            max-width: 30vw;
+            transform: translate(0, 0); /* Reset di eventuali trasformazioni */
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .text-svg:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Copertina */
+        
+        
+        /* Effetto di transizione tra le due sezioni */
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Secondo contenuto */
+        #second-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        /* Quando il secondo contenuto diventa visibile */
+        .visible {
+            opacity: 1 !important;
+            pointer-events: auto;
+        }.container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease-in-out;
+            z-index: 10; /* Assicura che rimanga visibile sopra altri elementi */
+        }
+        
+        /* Wrapper per il testo e la copertina */
+        .intro-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 80vw;
+        }
+        
+        /* Testo SVG */
+        .text-svg {
+            width: 280px;
+            height: auto;
+            max-width: 30vw;
+            transform: translate(0, 0); /* Reset di eventuali trasformazioni */
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .text-svg:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Copertina */
+        .cover-image {
+            width: 320px;
+            max-width: 30vw;
+            height: auto;
+        }
+        
+        /* Effetto di transizione tra le due sezioni */
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Secondo contenuto */
+        #second-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        /* Quando il secondo contenuto diventa visibile */
+        .visible {
+            opacity: 1 !important;
+            pointer-events: auto;
+        
+        }.container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease-in-out;
+            z-index: 10;}
+        /* Wrapper per il testo e la copertina */
+        .intro-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px; /* Maggiore spazio tra i due elementi */
+            max-width: 90vw;
+        }
+        
+        /* Testo SVG più grande */
+        .text-svg {
+            width: 450px; /* Aumentata la dimensione */
+            height: auto;
+            max-width: 40vw;
+            transform: translate(0, 0);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .text-svg:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Copertina più grande */
+        .cover-image {
+            width: 500px; /* Aumentata la dimensione */
+            max-width: 40vw;
+            height: auto;
+        }
+        
+        /* Effetto di transizione tra le due sezioni */
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        /* Secondo contenuto */
+        .grid-image {
+            width: auto; /* Mantiene la larghezza originale dell'immagine */
+            height: auto; /* Mantiene l'altezza originale */
+            max-width: 100vw; /* Non supera la larghezza dello schermo */
+            max-height: 100vh; /* Non supera l'altezza dello schermo */
+            object-fit: contain; /* Adatta l'immagine senza tagliarla o deformarla */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centra perfettamente l'immagine */
+            opacity: 1;
+            transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .hidden-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
+            background: white; /* Sfondo bianco */
+            color: black; /* Testo nero */
+            padding: 15px 25px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .hidden-button a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            pointer-events: auto;
+        }
+        .hidden-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: bounce 0.5s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            50% {
+                transform: translate(-50%, -52%) scale(1.15);
+            }
+        }
+        
+        /* inizio codice della pagina ESPLORA ARCHIVIO */
+        
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+        }
+
+        .gallery-item img {
+            width: 40vw;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.517);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .label {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            text-transform: uppercase;
+            align-self: flex-start;
+        }
+
+        .circle-arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: background 0.3s ease-in-out;
+        }
+        .circle-arrow svg {
+            transform: rotate(-45deg);
+        }
+        .circle-arrow.femminile:hover {
+            background: #a600ff;
+            color: white;
+        }
+
+        .circle-arrow.maschile:hover {
+            background: #fc8200;
+            color: white;
+        }
+        .label {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 3px;
+            font-size: 14px;
+            text-transform: uppercase;
+            align-self: flex-start;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .circle-arrow {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: background 0.2s ease-in-out, transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+
+        .description {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            align-self: flex-start;
+            letter-spacing: 1px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover .label {
+            transform: translateX(0);
+        }
+
+        .gallery-item:hover .circle-arrow {
+            transform: translateX(0);
+        }
+
+        .gallery-item:hover .description {
+            transform: translateY(0);
+        }
+
+        /* Stile per l'overlay del video */
+#intro {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+}
+        
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0; /* Inizialmente invisibile */
+    pointer-events: none;
+    z-index: 10000; /* Sopra tutto */
+    transition: opacity 1s ease-out; /* Transizione fluida */
+}
+/* Il video copre tutto lo schermo */
+#intro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Effetto dissolvenza */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 6px 15px; /* Riduciamo il padding */
+        flex-direction: column; /* Disposizione verticale */
+        align-items: center; /* Centriamo gli elementi */
+        height: auto; /* Altezza adattabile */
+        padding-bottom: 0px !important; /*
+    }
+
+    /* Riduciamo l'icona home */
+    .home-link .home-icon {
+        width: 30px; /* Rimpiccioliamo l'icona */
+        height: auto;
+    }
+
+    /* Riduciamo la dimensione del pulsante ARCHIVIO e lo centriamo */
+    .button-container {
+        font-size: 12px; /* Riduciamo la dimensione del testo */
+        padding: 5px 8px; /* Riduciamo il padding */
+        width: fit-content; /* Adatta la larghezza al contenuto */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white; /* Manteniamo il bordo */
+        border-radius: 5px;
+        background: transparent; /* Nessun riempimento */
+        margin-top: 5px auto 0 auto; /* Riduciamo il margine superiore */
+    }
+
+    .arrow-icon {
+        width: 12px; /* Rimpiccioliamo l'icona della freccia */
+        height: auto;
+        margin-right: 3px; /* Manteniamo un po' di spazio tra icona e testo */
+    }
+
+    /* Riduciamo l'immagine del titolo */
+    .header-title {
+        height: 70px; /* Riduciamo l'altezza per adattarlo al mobile */
+        max-width: 100%; /* Evitiamo che si allarghi troppo */
+        margin: 5px 0;
+        margin-bottom: 5px !important; /* Riduciamo lo spazio sotto la scritta FRAME */
+    }
+    }
+
+    .corner {
+        display: none; /* Nascondiamo gli angoli bianchi per evitare ingombro */
+    }
+    #intro {
+        display: none;
+    }
+
+@media screen and (max-width: 768px) {
+    .home-image {
+        width: 80%; /* Larghezza massima per occupare tutto lo spazio */
+        max-width: 400px; /* Impedisce che diventi troppo grande */
+        height: auto;
+        object-fit: contain; /* Evita distorsioni */
+        margin: 20px auto; /* Centriamo l'immagine */
+    }
+}
+@media screen and (max-width: 768px) {
+    .grid-image {
+        width: 100vw; /* Riempi la larghezza dello schermo */
+        height: 100vh; /* Riempi l'altezza dello schermo */
+        object-fit: cover; /* L'immagine si adatta senza deformarsi */
+    }
+
+    .hidden-button {
+        font-size: 12px; /* Rimpiccioliamo il testo del bottone */
+        padding: 8px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        display: flex;
+        flex-direction: column; /* Disposizione verticale */
+        align-items: center; /* Centra gli elementi */
+        justify-content: center; /* Centra gli elementi verticalmente */
+        gap: 15px; /* Spazio tra le immagini */
+        width: 100%; /* Assicura che il container prenda tutta la larghezza */
+        margin-top: 120px; 
+    }
+
+
+    .gallery-item {
+        display: flex;
+        justify-content: center; /* Centra le immagini */
+        width: 100%; /* Assicura che occupino tutta la larghezza */
+    }
+
+    .gallery-item img {
+        width: 80%; /* Riduciamo la dimensione */
+        max-width: 400px; /* Impediamo che diventino troppo grandi */
+        height: auto;
+        object-fit: contain; /* Evita di tagliare parti dell'immagine */
+    }
+    .overlay {
+        opacity: 1 !important; /* Mantiene le scritte sempre visibili */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
+        color: white;
+        font-size: 7px; /* Riduciamo la dimensione del testo */
+        font-weight: bold;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3); /* Sfondo leggermente più trasparente */
+        padding: 5px; /* Spazio interno per evitare che tocchi i bordi */
+    }
+
+    /* Adattiamo la dimensione delle immagini per bilanciare il layout */
+    .gallery-item {
+        position: relative;
+        width: 75%; /* Riduciamo leggermente la larghezza delle immagini */
+        max-width: 350px; /* Impediamo che diventino troppo grandi */
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+}
+}

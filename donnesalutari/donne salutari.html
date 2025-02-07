@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" xmlns:lr="http://adobe.com/lrg/0.0"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns:lr="http://adobe.com/lrg/0.0"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Galleria di Lightroom</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="assets/css/custom.css" >
+        <script src="assets/js/libs/modernizr.custom.23122.js"></script>
+    </head>
+    <body class="" data-pagination-style="scroll">
+                        <div id="thumbnailContainer">
+            <div class="thumbnails thumbnail-size-sm"></div>
+        </div>
+        <div id="loupeContainer" class="show-corners">
+            <div class="background"></div>
+            <div class="image-container"></div>
+            <div class="side-navigation">
+                <div class="hotspot" id="hotspotPrevLoupe">
+                    <div class="button" id="buttonPrevSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconPrevSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0l0,50h50V0L0,0z M18.49,25.05l9.707-9.264c0.418-0.399,1.093-0.403,1.506-0.008l1.498,1.43 c0.414,0.395,0.41,1.039-0.009,1.438l-6.765,6.456l6.613,6.31c0.411,0.392,0.414,1.024,0.008,1.412l-1.471,1.404 c-0.406,0.387-1.069,0.384-1.479-0.008l-6.612-6.311L18.49,25.05z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotspot" id="hotspotNextLoupe">
+                    <div class="button" id="buttonNextSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconNextSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0v50h50V0H0z M28.513,27.909l-6.612,6.311c-0.411,0.392-1.073,0.395-1.479,0.008l-1.471-1.404 c-0.406-0.388-0.402-1.02,0.008-1.412l6.613-6.31l-6.765-6.456c-0.419-0.399-0.422-1.043-0.009-1.438l1.498-1.43 c0.414-0.395,1.088-0.391,1.506,0.008l9.707,9.264L28.513,27.909z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="info-container">
+                <div id="loupeMeta"></div>
+                <ul class="lateral-nav">
+                    <li id="buttonPrev">
+                        <svg version="1.1" id="svgIconPrevLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M25.20105,14.76864l-8.2004,7.773l2.5314,2.3992l5.5858,5.2952c0.3469,0.3289,0.9064,0.3318,1.2497,0.0065
+                                l1.2431-1.1783c0.3429-0.3252,0.3398-0.8555-0.0071-1.1846l-5.5864-5.2948l5.7149-5.4171c0.3535-0.3349,0.3568-0.875,0.0074-1.2063
+                                l-1.2657-1.1995C26.12435,14.43064,25.55435,14.43354,25.20105,14.76864z"/>
+                        </svg>
+                    </li>
+                    <li class="count"><span id="countCurrent"></span> of <span id="countTotal"></span></li>
+                    <li id="buttonNext">
+                        <svg version="1.1" id="svgIconNextLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M19.79895,14.76864l8.2004,7.773l-2.5314,2.3992l-5.5858,5.2952c-0.3469,0.3289-0.9064,0.3318-1.2497,0.0065
+                                l-1.2431-1.1783c-0.3429-0.3252-0.3398-0.8555,0.0071-1.1846l5.5864-5.2948l-5.7149-5.4171
+                                c-0.3535-0.3349-0.3568-0.875-0.0074-1.2063l1.2657-1.1995C18.87565,14.43064,19.44565,14.43354,19.79895,14.76864z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div id="loupeCloseButton">
+                <svg version="1.1" id="svgIconLoupeClose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                    <path class="shape-x custom-colorable" d="M14.77881,17.30074l5.212,5.2222l-5.0831,5.0924c-0.3476,0.3484-0.5746,0.7624-0.2308,1.1067l1.5682,1.4763
+                        c0.3436,0.3443,0.8045,0.2596,1.1521-0.0886l5.0825-5.093l5.2119,5.222c0.3536,0.3547,0.9244,0.3578,1.2741,0.0073l1.2677-1.27
+                        c0.3497-0.3507,0.3465-0.9224-0.0071-1.2768l-5.2119-5.2221l5.0828-5.0925c0.3475-0.3485,0.5429-0.8259,0.1994-1.1702
+                        l-1.6474-1.4921c-0.3438-0.3443-0.6936-0.1803-1.0411,0.1679l-5.0828,5.0929l-5.212-5.222
+                        c-0.3537-0.3546-0.9241-0.3577-1.2742-0.007l-1.2672,1.2698C14.42171,16.37464,14.42491,16.94624,14.77881,17.30074z"/>
+                </svg>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var LR = LR || {};
+            LR.images = [                                                                                        {"id": "58829", "exportFilename": "2-211-food", "title": "", "caption" : ""},
+                         {"id": "58830", "exportFilename": "2-210-food", "title": "", "caption" : ""},
+                         {"id": "58832", "exportFilename": "2-129-food", "title": "", "caption" : ""},
+                         {"id": "58835", "exportFilename": "2-206-food", "title": "", "caption" : ""},
+                         {"id": "58836", "exportFilename": "laura_negrato_06", "title": "", "caption" : ""},
+                         {"id": "58838", "exportFilename": "2-194-food", "title": "", "caption" : ""},
+                         {"id": "58839", "exportFilename": "2-196-food", "title": "", "caption" : ""},
+                         {"id": "58840", "exportFilename": "2-197-food", "title": "", "caption" : ""},
+                         {"id": "58846", "exportFilename": "2-138-food", "title": "", "caption" : ""},
+                         {"id": "58847", "exportFilename": "IMG_3553", "title": "", "caption" : ""},
+                         {"id": "20418", "exportFilename": "20170516_TEST_Peonies_069", "title": "", "caption" : ""},
+                         {"id": "58848", "exportFilename": "IMG_5044-di-zucca-cavolo-nero-ceci", "title": "", "caption" : ""},
+                         {"id": "58852", "exportFilename": "2-299-food", "title": "", "caption" : ""},
+                         {"id": "20426", "exportFilename": "NYT-Gartland_26", "title": "", "caption" : "Glazed Shitakes with Bok Choy"},
+                         {"id": "20427", "exportFilename": "NYT_JGartland_234", "title": "", "caption" : "Pad Kee Mao"},
+                         {"id": "20434", "exportFilename": "2020_hummucado-toast_JuliaGartland_418", "title": "", "caption" : ""},
+                         {"id": "58873", "exportFilename": "filetti_di_sgombro", "title": "", "caption" : ""},
+                         {"id": "20441", "exportFilename": "London-food-photographer-stylist_", "title": "", "caption" : ""},
+                         {"id": "20442", "exportFilename": "London-food-photographer-stylist", "title": "", "caption" : ""},
+                         {"id": "20448", "exportFilename": "Kimberly-espinel-portfolio-4", "title": "", "caption" : ""},
+                         {"id": "58876", "exportFilename": "filetti_di_sgombro_orzo", "title": "", "caption" : ""},
+                         {"id": "20454", "exportFilename": "Kimberly-espinel-portfolio-1", "title": "", "caption" : ""},
+                         {"id": "20459", "exportFilename": "2023-0110_SALMONSITKA_SearedTunaSalmoriglio_2x3_150", "title": "", "caption" : ""},
+                         {"id": "58877", "exportFilename": "IMG_7777", "title": "", "caption" : ""},
+                         {"id": "20460", "exportFilename": "2023-0201_TROPICANAxHEARST_JG__42", "title": "", "caption" : ""},
+                         {"id": "20461", "exportFilename": "London-food-photography-food-stylist", "title": "", "caption" : ""},
+                         {"id": "58878", "exportFilename": "piadina_sfogliata_IMG_8132", "title": "", "caption" : ""},
+                         {"id": "20465", "exportFilename": "2023-0609_SALMONSITKA_Crispy-Sablefish_FB_134", "title": "", "caption" : ""},
+                         {"id": "20473", "exportFilename": "Kimberly-espinel-portfolio-37", "title": "", "caption" : ""},
+                         {"id": "20475", "exportFilename": "Kimberly-espinel-portfolio-25", "title": "", "caption" : ""},
+                         {"id": "20476", "exportFilename": "Kimberly-espinel-portfolio-43", "title": "", "caption" : ""},
+                         {"id": "20480", "exportFilename": "Kimberly-Espinel-portfolio-53", "title": "", "caption" : ""},
+                         {"id": "20490", "exportFilename": "Kimberly-Espinel-portfolio-60", "title": "", "caption" : ""},
+                         {"id": "58887", "exportFilename": "Immagine_19-09-24_-_10.34_1_", "title": "", "caption" : ""},
+                         {"id": "58893", "exportFilename": "Immagine_19-09-24_-_10.35_1_", "title": "", "caption" : ""},
+                         {"id": "58896", "exportFilename": "Immagine_19-09-24_-_13.36", "title": "", "caption" : ""},
+                         {"id": "58898", "exportFilename": "Immagine_19-09-24_-_13.36_4_", "title": "", "caption" : ""},
+                         {"id": "58902", "exportFilename": "Immagine_19-09-24_-_13.37_5_", "title": "", "caption" : ""},
+                         {"id": "58903", "exportFilename": "Immagine_19-09-24_-_13.38", "title": "", "caption" : ""},
+                         {"id": "58905", "exportFilename": "Immagine_19-09-24_-_13.38_2_", "title": "", "caption" : ""},
+                         {"id": "58907", "exportFilename": "Immagine_19-09-24_-_13.38_5_", "title": "", "caption" : ""},
+                         {"id": "58910", "exportFilename": "Immagine_19-09-24_-_13.39_1_", "title": "", "caption" : ""},
+                         {"id": "58911", "exportFilename": "Immagine_19-09-24_-_13.39_2_", "title": "", "caption" : ""},
+                         {"id": "58912", "exportFilename": "Screenshot_2024-09-19_alle_13.50.34", "title": "", "caption" : ""},
+                         {"id": "58913", "exportFilename": "Screenshot_2024-09-19_alle_13.51.09", "title": "", "caption" : ""},
+                         {"id": "58919", "exportFilename": "Screenshot_2024-10-02_alle_10.51.28", "title": "", "caption" : ""},
+                         {"id": "58923", "exportFilename": "Screenshot_2024-10-02_alle_10.53.21", "title": "", "caption" : ""},
+                         {"id": "58925", "exportFilename": "Screenshot_2024-10-02_alle_10.54.29", "title": "", "caption" : ""},
+                         {"id": "58927", "exportFilename": "Screenshot_2024-10-02_alle_11.04.33", "title": "", "caption" : ""},
+                         {"id": "58928", "exportFilename": "Screenshot_2024-10-02_alle_11.05.40", "title": "", "caption" : ""},
+                         {"id": "58931", "exportFilename": "Screenshot_2024-10-02_alle_11.17.04", "title": "", "caption" : ""},
+                         {"id": "58937", "exportFilename": "Screenshot_2024-10-02_alle_15.06.09", "title": "", "caption" : ""},
+                         {"id": "58938", "exportFilename": "Screenshot_2024-10-02_alle_15.06.20", "title": "", "caption" : ""},
+                         {"id": "58939", "exportFilename": "Screenshot_2024-10-02_alle_15.06.31", "title": "", "caption" : ""},
+                         {"id": "58953", "exportFilename": "IMG_3196-3", "title": "", "caption" : ""},
+                         {"id": "58960", "exportFilename": "torta-salata", "title": "", "caption" : ""},
+                         {"id": "58961", "exportFilename": "radicchio-con-uova-poche_", "title": "", "caption" : ""},
+                         {"id": "58962", "exportFilename": "IMG_1103", "title": "", "caption" : ""},
+                         {"id": "58970", "exportFilename": "dessert_alle_pere_-_martina_tribioli_pastry_chef", "title": "", "caption" : ""},
+                         {"id": "58973", "exportFilename": "IMG_7105", "title": "", "caption" : ""},
+                         {"id": "58975", "exportFilename": "Screenshot_2024-10-03_alle_10.08.39", "title": "", "caption" : ""},
+                         {"id": "58976", "exportFilename": "Screenshot_2024-10-03_alle_10.08.47", "title": "", "caption" : ""},
+                         {"id": "58977", "exportFilename": "Screenshot_2024-10-03_alle_10.08.55", "title": "", "caption" : ""},
+                         {"id": "58978", "exportFilename": "Screenshot_2024-10-03_alle_10.09.03", "title": "", "caption" : ""},
+                         {"id": "58979", "exportFilename": "Screenshot_2024-10-03_alle_10.09.14", "title": "", "caption" : ""},
+                         {"id": "58986", "exportFilename": "Screenshot_2024-10-03_alle_10.11.33", "title": "", "caption" : ""},
+                         {"id": "58987", "exportFilename": "Screenshot_2024-10-03_alle_10.13.51", "title": "", "caption" : ""},
+                         {"id": "58988", "exportFilename": "Screenshot_2024-10-03_alle_10.14.00", "title": "", "caption" : ""},
+                         {"id": "58990", "exportFilename": "Screenshot_2024-10-03_alle_10.14.17", "title": "", "caption" : ""},
+                         {"id": "58991", "exportFilename": "Screenshot_2024-10-03_alle_10.14.25", "title": "", "caption" : ""},
+                         {"id": "58993", "exportFilename": "Screenshot_2024-10-03_alle_10.14.50", "title": "", "caption" : ""},
+                         {"id": "58995", "exportFilename": "Screenshot_2024-10-03_alle_10.15.19", "title": "", "caption" : ""},
+                         {"id": "58996", "exportFilename": "Screenshot_2024-10-03_alle_10.15.31", "title": "", "caption" : ""},
+                         {"id": "59001", "exportFilename": "Screenshot_2024-10-03_alle_10.17.19", "title": "", "caption" : ""},
+                         {"id": "59003", "exportFilename": "Screenshot_2024-10-03_alle_10.17.38", "title": "", "caption" : ""},
+                         {"id": "59004", "exportFilename": "Screenshot_2024-10-03_alle_10.18.03", "title": "", "caption" : ""},
+                         {"id": "59005", "exportFilename": "Screenshot_2024-10-03_alle_10.18.28", "title": "", "caption" : ""},
+                         {"id": "59007", "exportFilename": "Screenshot_2024-10-03_alle_10.20.09", "title": "", "caption" : ""},
+                         {"id": "59010", "exportFilename": "Screenshot_2024-10-03_alle_10.20.36", "title": "", "caption" : ""},
+                         {"id": "59011", "exportFilename": "Screenshot_2024-10-03_alle_10.20.55", "title": "", "caption" : ""},
+                         {"id": "59020", "exportFilename": "laura_negrato_17", "title": "", "caption" : ""},
+                         {"id": "59032", "exportFilename": "Screenshot_2024-10-03_alle_12.19.15", "title": "", "caption" : ""},
+                         {"id": "59042", "exportFilename": "Screenshot_2024-10-03_alle_14.55.02", "title": "", "caption" : ""},
+                         {"id": "59043", "exportFilename": "Screenshot_2024-10-03_alle_14.55.26", "title": "", "caption" : ""},
+                         {"id": "59044", "exportFilename": "Screenshot_2024-10-03_alle_14.56.43", "title": "", "caption" : ""},
+                         {"id": "59046", "exportFilename": "Screenshot_2024-10-03_alle_14.57.19", "title": "", "caption" : ""},
+                         {"id": "59047", "exportFilename": "Screenshot_2024-10-03_alle_14.57.30", "title": "", "caption" : ""},
+                         {"id": "59049", "exportFilename": "Screenshot_2024-10-03_alle_14.58.16", "title": "", "caption" : ""},
+                         {"id": "59053", "exportFilename": "Screenshot_2024-10-03_alle_15.01.51", "title": "", "caption" : ""},
+                         {"id": "59055", "exportFilename": "Screenshot_2024-10-03_alle_15.02.17", "title": "", "caption" : ""},
+                         {"id": "59062", "exportFilename": "Screenshot_2024-10-03_alle_15.09.31", "title": "", "caption" : ""},
+                         {"id": "59063", "exportFilename": "Screenshot_2024-10-03_alle_15.09.57", "title": "", "caption" : ""},
+                         {"id": "59064", "exportFilename": "Screenshot_2024-10-03_alle_15.10.25", "title": "", "caption" : ""},
+                         {"id": "59069", "exportFilename": "Screenshot_2024-10-03_alle_15.12.34", "title": "", "caption" : ""},
+                         {"id": "59072", "exportFilename": "Screenshot_2024-10-03_alle_15.18.29", "title": "", "caption" : ""},
+                         {"id": "59073", "exportFilename": "Screenshot_2024-10-03_alle_15.30.16", "title": "", "caption" : ""},
+                         {"id": "59074", "exportFilename": "Screenshot_2024-10-03_alle_15.30.28", "title": "", "caption" : ""},
+                         {"id": "59076", "exportFilename": "Screenshot_2024-10-03_alle_15.30.55", "title": "", "caption" : ""},
+                         {"id": "59085", "exportFilename": "Screenshot_2024-10-03_alle_16.43.12", "title": "", "caption" : ""},
+                         {"id": "59088", "exportFilename": "Screenshot_2024-10-03_alle_16.44.03", "title": "", "caption" : ""},
+                         {"id": "59095", "exportFilename": "Screenshot_2024-10-03_alle_16.52.35", "title": "", "caption" : ""},
+                         {"id": "59097", "exportFilename": "Screenshot_2024-10-03_alle_16.52.59", "title": "", "caption" : ""},
+                         {"id": "59100", "exportFilename": "Screenshot_2024-10-03_alle_16.53.56", "title": "", "caption" : ""},
+                         {"id": "20660", "exportFilename": "Screenshot_2024-10-04_alle_15.44.14", "title": "", "caption" : ""},
+                         {"id": "20684", "exportFilename": "1-4...", "title": "", "caption" : ""},
+                         {"id": "20688", "exportFilename": "1-12", "title": "", "caption" : ""},
+                         {"id": "20690", "exportFilename": "1-19", "title": "", "caption" : ""},
+                         {"id": "20691", "exportFilename": "1-22", "title": "", "caption" : ""},
+                         {"id": "20695", "exportFilename": "1-38", "title": "", "caption" : ""},
+                         {"id": "20696", "exportFilename": "1-55-2048x2048", "title": "", "caption" : ""},
+                         {"id": "20697", "exportFilename": "1-65", "title": "", "caption" : ""},
+                         {"id": "20700", "exportFilename": "Screenshot_2024-10-04_alle_17.17.45", "title": "", "caption" : ""},
+                         {"id": "20701", "exportFilename": "Screenshot_2024-10-04_alle_17.17.56", "title": "", "caption" : ""},
+                         {"id": "20703", "exportFilename": "Screenshot_2024-10-04_alle_17.18.17", "title": "", "caption" : ""},
+                         {"id": "20715", "exportFilename": "Screenshot_2024-10-04_alle_17.21.00", "title": "", "caption" : ""},
+                         {"id": "20716", "exportFilename": "Screenshot_2024-10-04_alle_17.21.09", "title": "", "caption" : ""},
+                         {"id": "20721", "exportFilename": "Screenshot_2024-10-04_alle_17.35.44", "title": "", "caption" : ""},
+                         {"id": "20725", "exportFilename": "Screenshot_2024-10-04_alle_17.37.21", "title": "", "caption" : ""},
+                         {"id": "20896", "exportFilename": "Screenshot_2024-10-06_alle_19.24.00", "title": "", "caption" : ""},
+                         {"id": "20897", "exportFilename": "Screenshot_2024-10-06_alle_19.24.09", "title": "", "caption" : ""},
+                         {"id": "20902", "exportFilename": "Screenshot_2024-10-06_alle_19.25.13", "title": "", "caption" : ""},
+                         {"id": "20903", "exportFilename": "Screenshot_2024-10-06_alle_19.25.36", "title": "", "caption" : ""},
+                         {"id": "20904", "exportFilename": "Screenshot_2024-10-06_alle_19.25.44", "title": "", "caption" : ""},
+                         {"id": "20906", "exportFilename": "Screenshot_2024-10-06_alle_19.25.58", "title": "", "caption" : ""},
+                         {"id": "20908", "exportFilename": "Screenshot_2024-10-06_alle_19.26.16", "title": "", "caption" : ""},
+                         {"id": "20909", "exportFilename": "Screenshot_2024-10-06_alle_19.26.25", "title": "", "caption" : ""},
+                         {"id": "20910", "exportFilename": "Screenshot_2024-10-06_alle_19.26.31", "title": "", "caption" : ""},
+                         {"id": "20911", "exportFilename": "Screenshot_2024-10-06_alle_19.26.47", "title": "", "caption" : ""},
+                         {"id": "20913", "exportFilename": "Screenshot_2024-10-06_alle_19.27.10", "title": "", "caption" : ""},
+                         {"id": "20915", "exportFilename": "Screenshot_2024-10-06_alle_19.27.31", "title": "", "caption" : ""},
+                         {"id": "20917", "exportFilename": "Screenshot_2024-10-06_alle_19.28.07", "title": "", "caption" : ""},
+                         {"id": "20918", "exportFilename": "Screenshot_2024-10-06_alle_19.28.22", "title": "", "caption" : ""},
+                         {"id": "20919", "exportFilename": "Screenshot_2024-10-06_alle_19.28.36", "title": "", "caption" : ""},
+                         {"id": "20923", "exportFilename": "Screenshot_2024-10-06_alle_19.29.33", "title": "", "caption" : ""},
+                         {"id": "20925", "exportFilename": "Screenshot_2024-10-06_alle_19.56.06", "title": "", "caption" : ""},
+                         {"id": "20927", "exportFilename": "Screenshot_2024-10-06_alle_19.56.33", "title": "", "caption" : ""},
+                         {"id": "20929", "exportFilename": "Screenshot_2024-10-06_alle_19.56.55", "title": "", "caption" : ""},
+                         {"id": "20930", "exportFilename": "Screenshot_2024-10-06_alle_19.57.05", "title": "", "caption" : ""},
+                         {"id": "20935", "exportFilename": "Screenshot_2024-10-06_alle_19.58.09", "title": "", "caption" : ""},
+                         {"id": "20937", "exportFilename": "Screenshot_2024-10-06_alle_19.58.39", "title": "", "caption" : ""},
+                         {"id": "20939", "exportFilename": "Screenshot_2024-10-06_alle_19.59.55", "title": "", "caption" : ""},
+                         {"id": "20942", "exportFilename": "Screenshot_2024-10-06_alle_20.01.12", "title": "", "caption" : ""},
+                         {"id": "20943", "exportFilename": "Screenshot_2024-10-06_alle_20.01.25", "title": "", "caption" : ""},
+                         {"id": "20944", "exportFilename": "Screenshot_2024-10-06_alle_20.08.27", "title": "", "caption" : ""},
+                         {"id": "20946", "exportFilename": "yellow-snacking-cake", "title": "", "caption" : ""},
+                         {"id": "20947", "exportFilename": "scotcharoo-blondies-4", "title": "", "caption" : ""},
+                         {"id": "20967", "exportFilename": "2021-0330_steamed-water-egg-custard-final_4x5_julia-gartland_327", "title": "", "caption" : ""},
+                         {"id": "20970", "exportFilename": "2010-0810_chicken-fajitas_3x2_julia-gartland_067_2", "title": "", "caption" : ""},
+                         {"id": "20980", "exportFilename": "Screenshot_2024-10-09_alle_11.29.28", "title": "", "caption" : ""},
+                         {"id": "20981", "exportFilename": "Screenshot_2024-10-09_alle_11.29.37", "title": "", "caption" : ""},
+                         {"id": "20983", "exportFilename": "Screenshot_2024-10-09_alle_11.30.00", "title": "", "caption" : ""},
+                         {"id": "20985", "exportFilename": "Screenshot_2024-10-09_alle_11.30.20", "title": "", "caption" : ""},
+                         {"id": "20989", "exportFilename": "Screenshot_2024-10-09_alle_11.31.03", "title": "", "caption" : ""},
+                         {"id": "20992", "exportFilename": "Screenshot_2024-10-09_alle_11.31.39", "title": "", "caption" : ""},
+                         {"id": "20996", "exportFilename": "Screenshot_2024-10-09_alle_11.32.16", "title": "", "caption" : ""},
+                         {"id": "20997", "exportFilename": "Screenshot_2024-10-09_alle_11.32.27", "title": "", "caption" : ""},
+                         {"id": "20999", "exportFilename": "Screenshot_2024-10-09_alle_11.32.39", "title": "", "caption" : ""},
+                         {"id": "21001", "exportFilename": "Screenshot_2024-10-09_alle_11.33.02", "title": "", "caption" : ""},
+                         {"id": "21002", "exportFilename": "Screenshot_2024-10-09_alle_11.33.09", "title": "", "caption" : ""},
+                         {"id": "21006", "exportFilename": "Screenshot_2024-10-09_alle_11.33.57", "title": "", "caption" : ""},
+                         {"id": "21011", "exportFilename": "Screenshot_2024-10-09_alle_11.34.56", "title": "", "caption" : ""},
+                         {"id": "21020", "exportFilename": "Screenshot_2024-10-09_alle_11.36.43", "title": "", "caption" : ""},
+                         {"id": "21026", "exportFilename": "MS_SKU117880_hero", "title": "", "caption" : ""},
+                         {"id": "21027", "exportFilename": "SKU94740_hero", "title": "", "caption" : ""},
+                         {"id": "21028", "exportFilename": "MS_SKU1911_hero", "title": "", "caption" : ""},
+                         {"id": "21029", "exportFilename": "MS_SKU1909_hero_marketing", "title": "", "caption" : ""},
+                         {"id": "21030", "exportFilename": "SKU91801_hero", "title": "", "caption" : ""},
+                         {"id": "21040", "exportFilename": "MSL_almon-cover_sat", "title": "", "caption" : ""},
+                         {"id": "21044", "exportFilename": "LentilSoupWithEnokiMushrooms_Prism_048", "title": "", "caption" : ""},
+                         {"id": "21045", "exportFilename": "CaliforniaSpreadSandwich_001", "title": "", "caption" : ""},
+                         {"id": "21046", "exportFilename": "CarrotSoup_031", "title": "", "caption" : ""},
+                         {"id": "21048", "exportFilename": "CitrusDatesOlivesPistachio_007", "title": "", "caption" : ""},
+                         {"id": "21049", "exportFilename": "3Dips_024", "title": "", "caption" : ""},
+                         {"id": "21052", "exportFilename": "CharredBroccoli_017", "title": "", "caption" : ""},
+                         {"id": "21053", "exportFilename": "EscaroleWhiteBean_021", "title": "", "caption" : ""},
+                         {"id": "21054", "exportFilename": "ChoppedSalad_007", "title": "", "caption" : ""},
+                         {"id": "21055", "exportFilename": "KaleSaladCrispyChickpeas_001", "title": "", "caption" : ""},
+                         {"id": "21056", "exportFilename": "RoastedCherryTomatoSaucePasta_021", "title": "", "caption" : ""},
+                         {"id": "21057", "exportFilename": "ZucchiniSoup_020", "title": "", "caption" : ""},
+                         {"id": "21058", "exportFilename": "TunaGrapefruitAvoBowl_013", "title": "", "caption" : ""},
+                         {"id": "21059", "exportFilename": "Jicama_Slaw_008", "title": "", "caption" : ""},
+                         {"id": "21060", "exportFilename": "NYE_Salad_034", "title": "", "caption" : ""},
+                         {"id": "21063", "exportFilename": "Chicories_and_Persimmons_002", "title": "", "caption" : ""},
+                         {"id": "21064", "exportFilename": "Chicories_with_Tahini_001", "title": "", "caption" : ""},
+                         {"id": "21065", "exportFilename": "Canteloupe_Cucumbers_007", "title": "", "caption" : ""},
+                         {"id": "21066", "exportFilename": "Fresno_Chili_Roasted_Salmon_033.jpgFLIP", "title": "", "caption" : ""},
+                         {"id": "21068", "exportFilename": "984_RoastedCurriedChickenAndGrapeSalad", "title": "", "caption" : ""},
+                         {"id": "21069", "exportFilename": "Heatlhyish_796_CheesyBroccoliAndPeaSoup", "title": "", "caption" : ""},
+                                    ]        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

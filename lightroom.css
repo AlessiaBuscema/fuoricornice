@@ -1,0 +1,145 @@
+
+body{
+    margin-top: 150px;
+}
+.button-container {
+    gap: 10px; 
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.header-title {
+    height: 120px;
+    max-width: 120%;
+    margin-right: -100px; 
+}
+ /* Angoli bianchi */
+ .corner {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    z-index: 1100; /* Sopra all'header */
+}
+
+.top-left {
+    top: 10px; /* Staccato dai bordi */
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.bottom-left {
+    bottom: 10px; /* Staccato dai bordi */
+    left: 10px;
+    border-right: none;
+    border-top: none;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.home-icon {
+    width: 40px;
+    height: auto;
+    margin: 0 auto;
+    display: block; /* Assicura che l'immagine si comporti come un elemento block */
+
+}
+
+.archive-link {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 7px 12px;
+    border: 1px solid white; /* Solo la traccia */
+    border-radius: 5px;
+    font-size: 18px;
+    background: transparent; /* Rimuove il riempimento */
+}
+.arrow-icon {
+    width: 16px;
+    height: auto;
+    margin-left: 2px; /* Sposta l'icona a destra del testo */
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: space-between; /* Allinea gli elementi ai due lati */
+    align-items: center; /* Allinea verticalmente */
+    padding: 0 20px; /* Aggiunge spazio ai margini */
+}
+.filter-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.filter-buttons {
+    display: flex;
+    gap: 10px; /* Spazio tra i bottoni */
+    margin-bottom: 20px; /* Spazio tra i bottoni e le immagini */
+     
+}
+
+.filter-button {
+    background-color: #000; /* Colore di sfondo */
+    color: #fff; /* Testo bianco */
+    padding: 10px 17px;
+    text-decoration: none;
+    border-radius: 5px; /* Angoli arrotondati */
+    border: 2px solid #fff
+    transition: background 0.3s;
+}
+
+
+
+/* Se il body ha la classe "page-dolci", cambia colore */
+.page-dolci .filter-button:hover {
+    background-color: rgb(128, 0, 207);
+}
+
+/* Se il body ha la classe "page-salutari", cambia colore */
+.page-salutari .filter-button:hover {
+    background-color: rgb(255, 111, 0);
+}
+.hidden-header {
+    display: none !important;
+}
+
+
+/* Uomini: attivo in arancione */
+.active-men {
+    background-color: rgb(255, 111, 0);
+}
+/* Donne: attivo in un altro colore (esempio viola) */
+.active-women {
+    background-color: rgb(128, 0, 207);
+}

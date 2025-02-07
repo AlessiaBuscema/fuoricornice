@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns:lr="http://adobe.com/lrg/0.0"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAME - Archivio</title>
+    
+    <!-- CSS di Lightroom -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="assets/css/custom.css">
+    
+    <!-- CSS personalizzato -->
+    <link rel="stylesheet" href="lightroom.css">
+</head>
+<body class="page-salutari" data-pagination-style="scroll"></body>
+        <header>
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <a href="ARCHIVIO.html" class="home-link">
+                <img src="icona home-08-08-08.png" alt="Home" class="home-icon">
+            </a>
+            <img src="layout archivio-07-07.png" alt="FRAME - Fotografiamo il cibo o i pregiudizi?" class="header-title">
+            <a href="esplora archivio.html" class="archive-link">
+                <div class="button-container">
+                    <img src="FRECCIA ICONA-09.png" alt="Freccia" class="arrow-icon"> ARCHIVIO 
+                </div>
+            </a>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </header>
+    </header>
+    <div class="filter-container">
+        <div class="filter-title">FOTOGRAFIE SCATTATE DAL GENERE MASCHILE</div>
+        <div class="filter-buttons">
+            <a href="uomo tutti.html" class="filter-button">TUTTE</a>
+            <a href="uomo salutare.html" class="filter-button">PIATTI SALUTARI</a>
+            <a href="uomo sostanzioso.html" class="filter-button">PIATTI SOSTANZIOSI</a>
+            <a href="uomo dolci.html" class="filter-button active-men">DOLCI</a>
+        </div>
+    </div>
+    <body class="" data-pagination-style="scroll">
+                        <div id="thumbnailContainer">
+            <div class="thumbnails thumbnail-size-sm"></div>
+        </div>
+        <div id="loupeContainer" class="show-corners">
+            <div class="background"></div>
+            <div class="image-container"></div>
+            <div class="side-navigation">
+                <div class="hotspot" id="hotspotPrevLoupe">
+                    <div class="button" id="buttonPrevSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconPrevSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0l0,50h50V0L0,0z M18.49,25.05l9.707-9.264c0.418-0.399,1.093-0.403,1.506-0.008l1.498,1.43 c0.414,0.395,0.41,1.039-0.009,1.438l-6.765,6.456l6.613,6.31c0.411,0.392,0.414,1.024,0.008,1.412l-1.471,1.404 c-0.406,0.387-1.069,0.384-1.479-0.008l-6.612-6.311L18.49,25.05z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotspot" id="hotspotNextLoupe">
+                    <div class="button" id="buttonNextSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconNextSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0v50h50V0H0z M28.513,27.909l-6.612,6.311c-0.411,0.392-1.073,0.395-1.479,0.008l-1.471-1.404 c-0.406-0.388-0.402-1.02,0.008-1.412l6.613-6.31l-6.765-6.456c-0.419-0.399-0.422-1.043-0.009-1.438l1.498-1.43 c0.414-0.395,1.088-0.391,1.506,0.008l9.707,9.264L28.513,27.909z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="info-container">
+                <div id="loupeMeta"></div>
+                <ul class="lateral-nav">
+                    <li id="buttonPrev">
+                        <svg version="1.1" id="svgIconPrevLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M25.20105,14.76864l-8.2004,7.773l2.5314,2.3992l5.5858,5.2952c0.3469,0.3289,0.9064,0.3318,1.2497,0.0065
+                                l1.2431-1.1783c0.3429-0.3252,0.3398-0.8555-0.0071-1.1846l-5.5864-5.2948l5.7149-5.4171c0.3535-0.3349,0.3568-0.875,0.0074-1.2063
+                                l-1.2657-1.1995C26.12435,14.43064,25.55435,14.43354,25.20105,14.76864z"/>
+                        </svg>
+                    </li>
+                    <li class="count"><span id="countCurrent"></span> of <span id="countTotal"></span></li>
+                    <li id="buttonNext">
+                        <svg version="1.1" id="svgIconNextLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M19.79895,14.76864l8.2004,7.773l-2.5314,2.3992l-5.5858,5.2952c-0.3469,0.3289-0.9064,0.3318-1.2497,0.0065
+                                l-1.2431-1.1783c-0.3429-0.3252-0.3398-0.8555,0.0071-1.1846l5.5864-5.2948l-5.7149-5.4171
+                                c-0.3535-0.3349-0.3568-0.875-0.0074-1.2063l1.2657-1.1995C18.87565,14.43064,19.44565,14.43354,19.79895,14.76864z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div id="loupeCloseButton">
+                <svg version="1.1" id="svgIconLoupeClose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                    <path class="shape-x custom-colorable" d="M14.77881,17.30074l5.212,5.2222l-5.0831,5.0924c-0.3476,0.3484-0.5746,0.7624-0.2308,1.1067l1.5682,1.4763
+                        c0.3436,0.3443,0.8045,0.2596,1.1521-0.0886l5.0825-5.093l5.2119,5.222c0.3536,0.3547,0.9244,0.3578,1.2741,0.0073l1.2677-1.27
+                        c0.3497-0.3507,0.3465-0.9224-0.0071-1.2768l-5.2119-5.2221l5.0828-5.0925c0.3475-0.3485,0.5429-0.8259,0.1994-1.1702
+                        l-1.6474-1.4921c-0.3438-0.3443-0.6936-0.1803-1.0411,0.1679l-5.0828,5.0929l-5.212-5.222
+                        c-0.3537-0.3546-0.9241-0.3577-1.2742-0.007l-1.2672,1.2698C14.42171,16.37464,14.42491,16.94624,14.77881,17.30074z"/>
+                </svg>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var LR = LR || {};
+            LR.images = [                                                                                        {"id": "48592", "exportFilename": "BEAR_NAKED_FRUIT_NUT_TABLE_-New-", "title": "", "caption" : ""},
+                         {"id": "48593", "exportFilename": "29.07.20_OLIPOP_ROOT_BEER_FLOAT__SQ_", "title": "", "caption" : ""},
+                         {"id": "48598", "exportFilename": "NoOnesAskingForPerfection-EngMuf-LifeStyle_156-powderedSugarOption_final_SQ_", "title": "", "caption" : ""},
+                         {"id": "48600", "exportFilename": "02_CLASSIC_DOUBLE_DUO_FINAL_", "title": "", "caption" : ""},
+                         {"id": "48605", "exportFilename": "TENIMENTI_013_0619_ANDREAFEDERICIPHOTO-X3", "title": "", "caption" : ""},
+                         {"id": "48614", "exportFilename": "VICENZI", "title": "", "caption" : ""},
+                         {"id": "48622", "exportFilename": "MOIC-Milkshake", "title": "", "caption" : ""},
+                         {"id": "48623", "exportFilename": "AnimalCookie-Milkshake", "title": "", "caption" : ""},
+                         {"id": "48624", "exportFilename": "BananaSplit-Milkshake", "title": "", "caption" : ""},
+                         {"id": "20542", "exportFilename": "Metro-54727-FY22_WWYW_Campaign_TableTent_02_1", "title": "", "caption" : ""},
+                         {"id": "20501", "exportFilename": "Screenshot_2024-10-01_alle_09.52.10", "title": "", "caption" : ""},
+                         {"id": "20507", "exportFilename": "Screenshot_2024-10-01_alle_09.54.07", "title": "", "caption" : ""},
+                         {"id": "20508", "exportFilename": "Screenshot_2024-10-01_alle_09.54.36", "title": "", "caption" : ""},
+                         {"id": "20509", "exportFilename": "Screenshot_2024-10-01_alle_09.54.47", "title": "", "caption" : ""},
+                         {"id": "20510", "exportFilename": "Screenshot_2024-10-01_alle_09.54.57", "title": "", "caption" : ""},
+                         {"id": "20518", "exportFilename": "Screenshot_2024-10-01_alle_09.59.14", "title": "", "caption" : ""},
+                         {"id": "20532", "exportFilename": "Screenshot_2024-10-01_alle_10.06.45", "title": "", "caption" : ""},
+                         {"id": "20543", "exportFilename": "MN_Fisher_Nuts-02", "title": "", "caption" : ""},
+                         {"id": "20544", "exportFilename": "MN_Fisher_Nuts-04", "title": "", "caption" : ""},
+                         {"id": "20565", "exportFilename": "RRE0618ICECR_28012_6342_0449", "title": "", "caption" : ""},
+                         {"id": "20570", "exportFilename": "BON_Aug14_061214-284", "title": "Bon Appetit", "caption" : ""},
+                         {"id": "20586", "exportFilename": "Screenshot_2024-10-01_alle_17.14.21", "title": "", "caption" : ""},
+                         {"id": "20610", "exportFilename": "Screenshot_2024-10-01_alle_17.22.11", "title": "", "caption" : ""},
+                         {"id": "20611", "exportFilename": "Screenshot_2024-10-01_alle_17.22.51", "title": "", "caption" : ""},
+                         {"id": "20612", "exportFilename": "Screenshot_2024-10-01_alle_17.23.01", "title": "", "caption" : ""},
+                         {"id": "20629", "exportFilename": "Screenshot_2024-10-01_alle_17.27.58", "title": "", "caption" : ""},
+                         {"id": "20729", "exportFilename": "Screenshot_2024-10-05_alle_11.59.10", "title": "", "caption" : ""},
+                         {"id": "20730", "exportFilename": "Screenshot_2024-10-05_alle_11.59.19", "title": "", "caption" : ""},
+                         {"id": "20735", "exportFilename": "Screenshot_2024-10-05_alle_12.02.27", "title": "", "caption" : ""},
+                         {"id": "20746", "exportFilename": "Screenshot_2024-10-05_alle_12.05.04", "title": "", "caption" : ""},
+                         {"id": "20749", "exportFilename": "Screenshot_2024-10-05_alle_12.06.24", "title": "", "caption" : ""},
+                         {"id": "20775", "exportFilename": "Screenshot_2024-10-05_alle_13.07.37", "title": "", "caption" : ""},
+                         {"id": "20782", "exportFilename": "Screenshot_2024-10-05_alle_13.41.34", "title": "", "caption" : ""},
+                         {"id": "20785", "exportFilename": "Screenshot_2024-10-05_alle_13.42.27", "title": "", "caption" : ""},
+                         {"id": "20796", "exportFilename": "Screenshot_2024-10-05_alle_13.45.09", "title": "", "caption" : ""},
+                         {"id": "20808", "exportFilename": "Screenshot_2024-10-05_alle_13.47.40", "title": "", "caption" : ""},
+                         {"id": "20868", "exportFilename": "Screenshot_2024-10-06_alle_18.05.53", "title": "", "caption" : ""},
+                         {"id": "20873", "exportFilename": "Screenshot_2024-10-06_alle_18.06.47", "title": "", "caption" : ""},
+                         {"id": "20874", "exportFilename": "Screenshot_2024-10-06_alle_18.06.53", "title": "", "caption" : ""},
+                         {"id": "20875", "exportFilename": "Screenshot_2024-10-06_alle_18.07.02", "title": "", "caption" : ""},
+                         {"id": "20876", "exportFilename": "Screenshot_2024-10-06_alle_18.07.11", "title": "", "caption" : ""},
+                         {"id": "20882", "exportFilename": "Screenshot_2024-10-06_alle_18.08.12", "title": "", "caption" : ""},
+                         {"id": "20890", "exportFilename": "Screenshot_2024-10-06_alle_18.13.55", "title": "", "caption" : ""},
+                         {"id": "48654", "exportFilename": "Screenshot_2024-10-07_alle_11.53.34", "title": "", "caption" : ""},
+                         {"id": "48667", "exportFilename": "Screenshot_2024-10-07_alle_14.17.09", "title": "", "caption" : ""},
+                         {"id": "48668", "exportFilename": "Screenshot_2024-10-07_alle_14.17.30", "title": "", "caption" : ""},
+                         {"id": "48679", "exportFilename": "Screenshot_2024-10-07_alle_14.30.31", "title": "", "caption" : ""},
+                         {"id": "48680", "exportFilename": "Screenshot_2024-10-07_alle_14.30.51", "title": "", "caption" : ""},
+                         {"id": "48681", "exportFilename": "Screenshot_2024-10-07_alle_14.31.03", "title": "", "caption" : ""},
+                         {"id": "48682", "exportFilename": "Screenshot_2024-10-07_alle_14.31.23", "title": "", "caption" : ""},
+                         {"id": "48683", "exportFilename": "Screenshot_2024-10-07_alle_14.31.29", "title": "", "caption" : ""},
+                         {"id": "48729", "exportFilename": "McCafe112692_mod_Test3_SITO-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48730", "exportFilename": "McCafe112730_mod_Test3_SITO-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48731", "exportFilename": "CHOCOLATE135856_Test3-1200x1600", "title": "", "caption" : ""},
+                         {"id": "48735", "exportFilename": "ICE_CREAM0372_Test6_SITO-1200x1500", "title": "", "caption" : ""},
+                         {"id": "48737", "exportFilename": "McCafe31381_Test4_CMYK_Def-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48739", "exportFilename": "GORGONZOLA8251_Test2_RGB-scaled-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48746", "exportFilename": "30_DOLCELA54605_Test1_RGB_Def-scaled-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48750", "exportFilename": "Copy_of_01_Pret_Programmatic_Transit_Hubs_1080x1440_9_19_2022-10_9_2022", "title": "", "caption" : ""},
+                         {"id": "48752", "exportFilename": "Screenshot_2024-10-08_alle_11.24.16", "title": "", "caption" : ""},
+                         {"id": "48776", "exportFilename": "Screenshot_2024-10-08_alle_11.28.31", "title": "", "caption" : ""},
+                         {"id": "48777", "exportFilename": "Screenshot_2024-10-08_alle_11.28.43", "title": "", "caption" : ""},
+                         {"id": "48778", "exportFilename": "Screenshot_2024-10-08_alle_11.28.51", "title": "", "caption" : ""},
+                         {"id": "48780", "exportFilename": "Screenshot_2024-10-08_alle_11.29.23", "title": "", "caption" : ""},
+                                    ]        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

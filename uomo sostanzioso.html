@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html class="no-js" xmlns:lr="http://adobe.com/lrg/0.0"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAME - Archivio</title>
+    
+    <!-- CSS di Lightroom -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="assets/css/custom.css">
+    
+    <!-- CSS personalizzato -->
+    <link rel="stylesheet" href="lightroom.css">
+</head>
+<body class="page-salutari" data-pagination-style="scroll">
+        <header>
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <a href="ARCHIVIO.html" class="home-link">
+                <img src="icona home-08-08-08.png" alt="Home" class="home-icon">
+            </a>
+            <img src="layout archivio-07-07.png" alt="FRAME - Fotografiamo il cibo o i pregiudizi?" class="header-title">
+            <a href="esplora archivio.html" class="archive-link">
+                <div class="button-container">
+                    <img src="FRECCIA ICONA-09.png" alt="Freccia" class="arrow-icon"> ARCHIVIO 
+                </div>
+            </a>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </header>
+    </header>
+    <div class="filter-container">
+        <div class="filter-title">FOTOGRAFIE SCATTATE DAL GENERE MASCHILE</div>
+        <div class="filter-buttons">
+            <a href="uomo tutti.html" class="filter-button">TUTTE</a>
+            <a href="uomo salutare.html" class="filter-button">PIATTI SALUTARI</a>
+            <a href="uomo sostanzioso.html" class="filter-button active-men">PIATTI SOSTANZIOSI</a>
+            <a href="uomo dolci.html" class="filter-button">DOLCI</a>
+        </div>
+    </div>
+    <body class="" data-pagination-style="scroll">
+                        <div id="thumbnailContainer">
+            <div class="thumbnails thumbnail-size-sm"></div>
+        </div>
+        <div id="loupeContainer" class="show-corners">
+            <div class="background"></div>
+            <div class="image-container"></div>
+            <div class="side-navigation">
+                <div class="hotspot" id="hotspotPrevLoupe">
+                    <div class="button" id="buttonPrevSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconPrevSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0l0,50h50V0L0,0z M18.49,25.05l9.707-9.264c0.418-0.399,1.093-0.403,1.506-0.008l1.498,1.43 c0.414,0.395,0.41,1.039-0.009,1.438l-6.765,6.456l6.613,6.31c0.411,0.392,0.414,1.024,0.008,1.412l-1.471,1.404 c-0.406,0.387-1.069,0.384-1.479-0.008l-6.612-6.311L18.49,25.05z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hotspot" id="hotspotNextLoupe">
+                    <div class="button" id="buttonNextSideLoupe">
+                        <svg version="1.1" baseProfile="basic" id="svgIconNextSideLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" xml:space="preserve">
+                            <path class="icon custom-colorable" fill="#231F20" d="M0,0v50h50V0H0z M28.513,27.909l-6.612,6.311c-0.411,0.392-1.073,0.395-1.479,0.008l-1.471-1.404 c-0.406-0.388-0.402-1.02,0.008-1.412l6.613-6.31l-6.765-6.456c-0.419-0.399-0.422-1.043-0.009-1.438l1.498-1.43 c0.414-0.395,1.088-0.391,1.506,0.008l9.707,9.264L28.513,27.909z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="info-container">
+                <div id="loupeMeta"></div>
+                <ul class="lateral-nav">
+                    <li id="buttonPrev">
+                        <svg version="1.1" id="svgIconPrevLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M25.20105,14.76864l-8.2004,7.773l2.5314,2.3992l5.5858,5.2952c0.3469,0.3289,0.9064,0.3318,1.2497,0.0065
+                                l1.2431-1.1783c0.3429-0.3252,0.3398-0.8555-0.0071-1.1846l-5.5864-5.2948l5.7149-5.4171c0.3535-0.3349,0.3568-0.875,0.0074-1.2063
+                                l-1.2657-1.1995C26.12435,14.43064,25.55435,14.43354,25.20105,14.76864z"/>
+                        </svg>
+                    </li>
+                    <li class="count"><span id="countCurrent"></span> of <span id="countTotal"></span></li>
+                    <li id="buttonNext">
+                        <svg version="1.1" id="svgIconNextLoupe" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#231F20;}
+                            </style>
+                            <path class="icon custom-colorable" d="M19.79895,14.76864l8.2004,7.773l-2.5314,2.3992l-5.5858,5.2952c-0.3469,0.3289-0.9064,0.3318-1.2497,0.0065
+                                l-1.2431-1.1783c-0.3429-0.3252-0.3398-0.8555,0.0071-1.1846l5.5864-5.2948l-5.7149-5.4171
+                                c-0.3535-0.3349-0.3568-0.875-0.0074-1.2063l1.2657-1.1995C18.87565,14.43064,19.44565,14.43354,19.79895,14.76864z"/>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div id="loupeCloseButton">
+                <svg version="1.1" id="svgIconLoupeClose" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve">
+                    <path class="shape-x custom-colorable" d="M14.77881,17.30074l5.212,5.2222l-5.0831,5.0924c-0.3476,0.3484-0.5746,0.7624-0.2308,1.1067l1.5682,1.4763
+                        c0.3436,0.3443,0.8045,0.2596,1.1521-0.0886l5.0825-5.093l5.2119,5.222c0.3536,0.3547,0.9244,0.3578,1.2741,0.0073l1.2677-1.27
+                        c0.3497-0.3507,0.3465-0.9224-0.0071-1.2768l-5.2119-5.2221l5.0828-5.0925c0.3475-0.3485,0.5429-0.8259,0.1994-1.1702
+                        l-1.6474-1.4921c-0.3438-0.3443-0.6936-0.1803-1.0411,0.1679l-5.0828,5.0929l-5.212-5.222
+                        c-0.3537-0.3546-0.9241-0.3577-1.2742-0.007l-1.2672,1.2698C14.42171,16.37464,14.42491,16.94624,14.77881,17.30074z"/>
+                </svg>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var LR = LR || {};
+            LR.images = [                                                                                        {"id": "20413", "exportFilename": "SWLW_MC_050311-1294", "title": "", "caption" : ""},
+                         {"id": "48578", "exportFilename": "CF_002_0715_ANDREAFEDERICI-X3", "title": "", "caption" : "www.andreafedericiphoto.com\rAll rights reserved - Copyright © Andrea Federici"},
+                         {"id": "48579", "exportFilename": "CRATEFUL_132_0715_ANDREAFEDERICI-X3", "title": "", "caption" : "www.andreafedericiphoto.com\rAll rights reserved - Copyright © Andrea Federici"},
+                         {"id": "48580", "exportFilename": "CRATEFUL_170_0715_ANDREAFEDERICI-X3", "title": "", "caption" : "www.andreafedericiphoto.com\rAll rights reserved - Copyright © Andrea Federici"},
+                         {"id": "48581", "exportFilename": "CRATEFUL_211_0715_ANDREAFEDERICI-X3", "title": "", "caption" : "www.andreafedericiphoto.com\rAll rights reserved - Copyright © Andrea Federici"},
+                         {"id": "48582", "exportFilename": "CRATEFUL_314_0715_ANDREAFEDERICI-X3", "title": "", "caption" : "www.andreafedericiphoto.com\rAll rights reserved - Copyright © Andrea Federici"},
+                         {"id": "48584", "exportFilename": "CRATEFUL_504_0715_ANDREAFEDERICI-X3", "title": "", "caption" : "www.andreafedericiphoto.com\rAll rights reserved - Copyright © Andrea Federici"},
+                         {"id": "20415", "exportFilename": "091316-BON-Hldy-139", "title": "Bon App", "caption" : ""},
+                         {"id": "20416", "exportFilename": "091316-BON-Hldy-368", "title": "", "caption" : ""},
+                         {"id": "20419", "exportFilename": "SBP-Port001", "title": "", "caption" : ""},
+                         {"id": "20420", "exportFilename": "SBP-Port007", "title": "", "caption" : ""},
+                         {"id": "48597", "exportFilename": "StackTheOdds_Bagel-SwirlBread_hero01-STACKED_final_NEW__SQ_", "title": "", "caption" : ""},
+                         {"id": "48602", "exportFilename": "senza_titolo_099_0319_ANDREAFEDERICIPHOTO-2-X3", "title": "", "caption" : "www.andreafedericiphoto.com"},
+                         {"id": "20428", "exportFilename": "SkylerBurtFoodPhotography0038", "title": "", "caption" : ""},
+                         {"id": "48609", "exportFilename": "Dos_Toros_FAJITA_-2", "title": "", "caption" : ""},
+                         {"id": "48615", "exportFilename": "6b95db8b-95e9-4c30-bcf7-0d94a1d8e784_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48616", "exportFilename": "940510cc-7905-4051-b745-c0da653f034e_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48617", "exportFilename": "9a0cb19c-66e5-4f71-b31c-989e0e985632_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48618", "exportFilename": "bae9f9ed-f04a-41cf-a063-3e93f4010082_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48619", "exportFilename": "02_PEPPERONI-PULL_026-gifS_SQ_", "title": "", "caption" : ""},
+                         {"id": "48620", "exportFilename": "14_BRISKET-PANINI-final_STACKED_SQ_", "title": "", "caption" : ""},
+                         {"id": "48630", "exportFilename": "burger", "title": "", "caption" : ""},
+                         {"id": "48625", "exportFilename": "CHERRY_PASTA_final_SQ", "title": "", "caption" : ""},
+                         {"id": "48626", "exportFilename": "GrilledCheese", "title": "", "caption" : ""},
+                         {"id": "48628", "exportFilename": "PEACH_HOTDOG_final_SQ", "title": "", "caption" : ""},
+                         {"id": "48629", "exportFilename": "Taco", "title": "", "caption" : ""},
+                         {"id": "20541", "exportFilename": "Metro-54727-FY22_WWYW_Campaign_HostessPoster_02_4_1", "title": "Metro-54727-FY22 WWYW_Campaign_TableTent_01", "caption" : ""},
+                         {"id": "20451", "exportFilename": "SkylerBurtFoodPhotography0019", "title": "", "caption" : ""},
+                         {"id": "48631", "exportFilename": "f59713bf-de15-40fb-931d-831c1923bad7_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48634", "exportFilename": "KH_Big_Mac___Cheese_Hero_Static__Digital_Social", "title": "", "caption" : ""},
+                         {"id": "20458", "exportFilename": "SkylerBurtFoodPhotography0008", "title": "", "caption" : ""},
+                         {"id": "48640", "exportFilename": "439317c3-d4c1-4199-b08f-f1fd79b9b747_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48642", "exportFilename": "f675f2b1-9d1d-4164-9415-f64d3ebca3eb", "title": "", "caption" : ""},
+                         {"id": "48644", "exportFilename": "11f7b399-929f-419e-a014-75977de9a000_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48646", "exportFilename": "24e17c76-9fe8-4e4e-b2cb-953fe7aa5f90_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48647", "exportFilename": "48884f90-0f6e-4b97-9bd0-307db31aba42_rw_1200", "title": "", "caption" : ""},
+                         {"id": "48648", "exportFilename": "4dbb5c1a-88e4-41e7-9d82-358e5fd8272e_rw_1920", "title": "", "caption" : ""},
+                         {"id": "48649", "exportFilename": "94c4e08e-068c-4959-b33b-abb267b17bc0_rw_1920", "title": "", "caption" : ""},
+                         {"id": "20496", "exportFilename": "Screenshot_2024-10-01_alle_09.49.46", "title": "", "caption" : ""},
+                         {"id": "20502", "exportFilename": "Screenshot_2024-10-01_alle_09.52.43", "title": "", "caption" : ""},
+                         {"id": "20504", "exportFilename": "Screenshot_2024-10-01_alle_09.53.12", "title": "", "caption" : ""},
+                         {"id": "20505", "exportFilename": "Screenshot_2024-10-01_alle_09.53.30", "title": "", "caption" : ""},
+                         {"id": "20511", "exportFilename": "Screenshot_2024-10-01_alle_09.55.10", "title": "", "caption" : ""},
+                         {"id": "20513", "exportFilename": "Screenshot_2024-10-01_alle_09.55.54", "title": "", "caption" : ""},
+                         {"id": "20515", "exportFilename": "Screenshot_2024-10-01_alle_09.57.55", "title": "", "caption" : ""},
+                         {"id": "20516", "exportFilename": "Screenshot_2024-10-01_alle_09.58.20", "title": "", "caption" : ""},
+                         {"id": "20517", "exportFilename": "Screenshot_2024-10-01_alle_09.58.40", "title": "", "caption" : ""},
+                         {"id": "20519", "exportFilename": "Screenshot_2024-10-01_alle_10.00.05", "title": "", "caption" : ""},
+                         {"id": "20520", "exportFilename": "Screenshot_2024-10-01_alle_10.00.35", "title": "", "caption" : ""},
+                         {"id": "20521", "exportFilename": "Screenshot_2024-10-01_alle_10.01.08", "title": "", "caption" : ""},
+                         {"id": "20522", "exportFilename": "Screenshot_2024-10-01_alle_10.01.22", "title": "", "caption" : ""},
+                         {"id": "20523", "exportFilename": "Screenshot_2024-10-01_alle_10.01.42", "title": "", "caption" : ""},
+                         {"id": "20524", "exportFilename": "Screenshot_2024-10-01_alle_10.03.06", "title": "", "caption" : ""},
+                         {"id": "20525", "exportFilename": "Screenshot_2024-10-01_alle_10.03.17", "title": "", "caption" : ""},
+                         {"id": "20527", "exportFilename": "Screenshot_2024-10-01_alle_10.03.42", "title": "", "caption" : ""},
+                         {"id": "20529", "exportFilename": "Screenshot_2024-10-01_alle_10.04.21", "title": "", "caption" : ""},
+                         {"id": "20530", "exportFilename": "Screenshot_2024-10-01_alle_10.04.58", "title": "", "caption" : ""},
+                         {"id": "20536", "exportFilename": "Screenshot_2024-10-01_alle_10.07.44", "title": "", "caption" : ""},
+                         {"id": "20539", "exportFilename": "Screenshot_2024-10-01_alle_10.09.37", "title": "", "caption" : ""},
+                         {"id": "20540", "exportFilename": "Screenshot_2024-10-01_alle_10.10.34", "title": "", "caption" : ""},
+                         {"id": "20545", "exportFilename": "416108_UE_Bring-It-3.0_McDonalds_48S_v3_MUM-UBBI296-DOOH", "title": "", "caption" : ""},
+                         {"id": "20548", "exportFilename": "NYT-Hamilton-20171013-142", "title": "", "caption" : ""},
+                         {"id": "20549", "exportFilename": "NYT-Hamilton-20171013-144", "title": "", "caption" : ""},
+                         {"id": "20550", "exportFilename": "WKCC-191217-FrontYardBeauty-0207-3", "title": "", "caption" : ""},
+                         {"id": "20551", "exportFilename": "WKCC-191217-BackYardBeauty-1680", "title": "", "caption" : ""},
+                         {"id": "20552", "exportFilename": "210525_BurgerFries-538-2", "title": "", "caption" : ""},
+                         {"id": "20553", "exportFilename": "210525_FriedChickenSandwitch-478-2", "title": "", "caption" : ""},
+                         {"id": "20554", "exportFilename": "210525_FryParty-633-2", "title": "", "caption" : ""},
+                         {"id": "20557", "exportFilename": "Raos-200814-0081", "title": "", "caption" : ""},
+                         {"id": "20560", "exportFilename": "06_HowTo_StartledPig_020", "title": "", "caption" : ""},
+                         {"id": "20561", "exportFilename": "47_PattyMelt_047", "title": "", "caption" : ""},
+                         {"id": "20562", "exportFilename": "15_FriedChickenSandwich_078", "title": "", "caption" : ""},
+                         {"id": "20563", "exportFilename": "31_HowTo_SourSausage_091", "title": "", "caption" : ""},
+                         {"id": "20566", "exportFilename": "BreakfastSpecialSauce-0091c", "title": "", "caption" : ""},
+                         {"id": "20568", "exportFilename": "091316-BON-Hldy-399", "title": "", "caption" : ""},
+                         {"id": "20569", "exportFilename": "BON_CHI_040315-166", "title": "Bon Apetit ", "caption" : ""},
+                         {"id": "20571", "exportFilename": "BON_Rsts_090711-156", "title": "Bon Appetit", "caption" : ""},
+                         {"id": "20572", "exportFilename": "Marcus_Nilsson_KFC-003", "title": "", "caption" : ""},
+                         {"id": "20573", "exportFilename": "Marcus_Nilsson_KFC-3", "title": "", "caption" : ""},
+                         {"id": "20574", "exportFilename": "11658-MN-341", "title": "", "caption" : ""},
+                         {"id": "20575", "exportFilename": "11658-MN-233", "title": "", "caption" : ""},
+                         {"id": "20576", "exportFilename": "11658-MN-211", "title": "", "caption" : ""},
+                         {"id": "20577", "exportFilename": "BA-Cover-170808-215-II", "title": "", "caption" : ""},
+                         {"id": "20579", "exportFilename": "BA-FallPlaybook-190522-0964", "title": "", "caption" : ""},
+                         {"id": "20581", "exportFilename": "DPRTRS_Pstrm_051115-083", "title": "Departures", "caption" : ""},
+                         {"id": "20583", "exportFilename": "WW_SetA_093014-0899", "title": "Weight Watchers", "caption" : ""},
+                         {"id": "20584", "exportFilename": "DPRTRS_Lima_053014-0406", "title": "Departures Magazine", "caption" : ""},
+                         {"id": "20585", "exportFilename": "Screenshot_2024-10-01_alle_17.14.05", "title": "", "caption" : ""},
+                         {"id": "20587", "exportFilename": "Screenshot_2024-10-01_alle_17.14.32", "title": "", "caption" : ""},
+                         {"id": "20589", "exportFilename": "Screenshot_2024-10-01_alle_17.14.55", "title": "", "caption" : ""},
+                         {"id": "20590", "exportFilename": "Screenshot_2024-10-01_alle_17.15.20", "title": "", "caption" : ""},
+                         {"id": "20593", "exportFilename": "Screenshot_2024-10-01_alle_17.15.56", "title": "", "caption" : ""},
+                         {"id": "20594", "exportFilename": "Screenshot_2024-10-01_alle_17.16.09", "title": "", "caption" : ""},
+                         {"id": "20595", "exportFilename": "Screenshot_2024-10-01_alle_17.16.22", "title": "", "caption" : ""},
+                         {"id": "20596", "exportFilename": "Screenshot_2024-10-01_alle_17.16.31", "title": "", "caption" : ""},
+                         {"id": "20597", "exportFilename": "Screenshot_2024-10-01_alle_17.16.39", "title": "", "caption" : ""},
+                         {"id": "20598", "exportFilename": "Screenshot_2024-10-01_alle_17.16.55", "title": "", "caption" : ""},
+                         {"id": "20599", "exportFilename": "Screenshot_2024-10-01_alle_17.17.06", "title": "", "caption" : ""},
+                         {"id": "20600", "exportFilename": "Screenshot_2024-10-01_alle_17.17.16", "title": "", "caption" : ""},
+                         {"id": "20601", "exportFilename": "Screenshot_2024-10-01_alle_17.17.26", "title": "", "caption" : ""},
+                         {"id": "20603", "exportFilename": "Screenshot_2024-10-01_alle_17.17.51", "title": "", "caption" : ""},
+                         {"id": "20604", "exportFilename": "Screenshot_2024-10-01_alle_17.18.05", "title": "", "caption" : ""},
+                         {"id": "20605", "exportFilename": "Screenshot_2024-10-01_alle_17.18.17", "title": "", "caption" : ""},
+                         {"id": "20607", "exportFilename": "Screenshot_2024-10-01_alle_17.18.41", "title": "", "caption" : ""},
+                         {"id": "20609", "exportFilename": "Screenshot_2024-10-01_alle_17.19.05", "title": "", "caption" : ""},
+                         {"id": "20613", "exportFilename": "Screenshot_2024-10-01_alle_17.23.15", "title": "", "caption" : ""},
+                         {"id": "20616", "exportFilename": "Screenshot_2024-10-01_alle_17.24.18", "title": "", "caption" : ""},
+                         {"id": "20617", "exportFilename": "Screenshot_2024-10-01_alle_17.24.33", "title": "", "caption" : ""},
+                         {"id": "20618", "exportFilename": "Screenshot_2024-10-01_alle_17.24.45", "title": "", "caption" : ""},
+                         {"id": "20620", "exportFilename": "Screenshot_2024-10-01_alle_17.25.14", "title": "", "caption" : ""},
+                         {"id": "20621", "exportFilename": "Screenshot_2024-10-01_alle_17.25.26", "title": "", "caption" : ""},
+                         {"id": "20622", "exportFilename": "Screenshot_2024-10-01_alle_17.25.45", "title": "", "caption" : ""},
+                         {"id": "20623", "exportFilename": "Screenshot_2024-10-01_alle_17.25.56", "title": "", "caption" : ""},
+                         {"id": "20627", "exportFilename": "Screenshot_2024-10-01_alle_17.27.17", "title": "", "caption" : ""},
+                         {"id": "20628", "exportFilename": "Screenshot_2024-10-01_alle_17.27.35", "title": "", "caption" : ""},
+                         {"id": "20630", "exportFilename": "Screenshot_2024-10-01_alle_17.28.21", "title": "", "caption" : ""},
+                         {"id": "20632", "exportFilename": "Screenshot_2024-10-01_alle_17.29.01", "title": "", "caption" : ""},
+                         {"id": "20633", "exportFilename": "Screenshot_2024-10-01_alle_17.29.19", "title": "", "caption" : ""},
+                         {"id": "20734", "exportFilename": "Screenshot_2024-10-05_alle_12.02.17", "title": "", "caption" : ""},
+                         {"id": "20736", "exportFilename": "Screenshot_2024-10-05_alle_12.02.43", "title": "", "caption" : ""},
+                         {"id": "20739", "exportFilename": "Screenshot_2024-10-05_alle_12.03.47", "title": "", "caption" : ""},
+                         {"id": "20740", "exportFilename": "Screenshot_2024-10-05_alle_12.04.02", "title": "", "caption" : ""},
+                         {"id": "20741", "exportFilename": "Screenshot_2024-10-05_alle_12.04.11", "title": "", "caption" : ""},
+                         {"id": "20742", "exportFilename": "Screenshot_2024-10-05_alle_12.04.20", "title": "", "caption" : ""},
+                         {"id": "20743", "exportFilename": "Screenshot_2024-10-05_alle_12.04.33", "title": "", "caption" : ""},
+                         {"id": "20744", "exportFilename": "Screenshot_2024-10-05_alle_12.04.40", "title": "", "caption" : ""},
+                         {"id": "20752", "exportFilename": "Screenshot_2024-10-05_alle_12.59.31", "title": "", "caption" : ""},
+                         {"id": "20760", "exportFilename": "Screenshot_2024-10-05_alle_13.01.21", "title": "", "caption" : ""},
+                         {"id": "20761", "exportFilename": "Screenshot_2024-10-05_alle_13.01.31", "title": "", "caption" : ""},
+                         {"id": "20763", "exportFilename": "Screenshot_2024-10-05_alle_13.02.46", "title": "", "caption" : ""},
+                         {"id": "20764", "exportFilename": "Screenshot_2024-10-05_alle_13.03.07", "title": "", "caption" : ""},
+                         {"id": "20765", "exportFilename": "Screenshot_2024-10-05_alle_13.03.23", "title": "", "caption" : ""},
+                         {"id": "20766", "exportFilename": "Screenshot_2024-10-05_alle_13.03.55", "title": "", "caption" : ""},
+                         {"id": "20767", "exportFilename": "Screenshot_2024-10-05_alle_13.05.00", "title": "", "caption" : ""},
+                         {"id": "20768", "exportFilename": "Screenshot_2024-10-05_alle_13.05.43", "title": "", "caption" : ""},
+                         {"id": "20769", "exportFilename": "Screenshot_2024-10-05_alle_13.05.53", "title": "", "caption" : ""},
+                         {"id": "20770", "exportFilename": "Screenshot_2024-10-05_alle_13.06.19", "title": "", "caption" : ""},
+                         {"id": "20771", "exportFilename": "Screenshot_2024-10-05_alle_13.06.29", "title": "", "caption" : ""},
+                         {"id": "20772", "exportFilename": "Screenshot_2024-10-05_alle_13.07.02", "title": "", "caption" : ""},
+                         {"id": "20773", "exportFilename": "Screenshot_2024-10-05_alle_13.07.13", "title": "", "caption" : ""},
+                         {"id": "20777", "exportFilename": "Screenshot_2024-10-05_alle_13.08.13", "title": "", "caption" : ""},
+                         {"id": "20779", "exportFilename": "Screenshot_2024-10-05_alle_13.40.03", "title": "", "caption" : ""},
+                         {"id": "20781", "exportFilename": "Screenshot_2024-10-05_alle_13.41.15", "title": "", "caption" : ""},
+                         {"id": "20783", "exportFilename": "Screenshot_2024-10-05_alle_13.41.55", "title": "", "caption" : ""},
+                         {"id": "20784", "exportFilename": "Screenshot_2024-10-05_alle_13.42.14", "title": "", "caption" : ""},
+                         {"id": "20787", "exportFilename": "Screenshot_2024-10-05_alle_13.42.58", "title": "", "caption" : ""},
+                         {"id": "20788", "exportFilename": "Screenshot_2024-10-05_alle_13.43.11", "title": "", "caption" : ""},
+                         {"id": "20792", "exportFilename": "Screenshot_2024-10-05_alle_13.44.12", "title": "", "caption" : ""},
+                         {"id": "20793", "exportFilename": "Screenshot_2024-10-05_alle_13.44.23", "title": "", "caption" : ""},
+                         {"id": "20794", "exportFilename": "Screenshot_2024-10-05_alle_13.44.41", "title": "", "caption" : ""},
+                         {"id": "20795", "exportFilename": "Screenshot_2024-10-05_alle_13.44.55", "title": "", "caption" : ""},
+                         {"id": "20797", "exportFilename": "Screenshot_2024-10-05_alle_13.45.23", "title": "", "caption" : ""},
+                         {"id": "20798", "exportFilename": "Screenshot_2024-10-05_alle_13.45.35", "title": "", "caption" : ""},
+                         {"id": "20799", "exportFilename": "Screenshot_2024-10-05_alle_13.45.46", "title": "", "caption" : ""},
+                         {"id": "20800", "exportFilename": "Screenshot_2024-10-05_alle_13.45.55", "title": "", "caption" : ""},
+                         {"id": "20801", "exportFilename": "Screenshot_2024-10-05_alle_13.46.09", "title": "", "caption" : ""},
+                         {"id": "20804", "exportFilename": "Screenshot_2024-10-05_alle_13.46.48", "title": "", "caption" : ""},
+                         {"id": "20805", "exportFilename": "Screenshot_2024-10-05_alle_13.47.00", "title": "", "caption" : ""},
+                         {"id": "20806", "exportFilename": "Screenshot_2024-10-05_alle_13.47.10", "title": "", "caption" : ""},
+                         {"id": "20810", "exportFilename": "Screenshot_2024-10-05_alle_13.48.32", "title": "", "caption" : ""},
+                         {"id": "20811", "exportFilename": "Screenshot_2024-10-05_alle_13.48.40", "title": "", "caption" : ""},
+                         {"id": "20812", "exportFilename": "Screenshot_2024-10-05_alle_13.48.48", "title": "", "caption" : ""},
+                         {"id": "20813", "exportFilename": "Screenshot_2024-10-05_alle_13.49.01", "title": "", "caption" : ""},
+                         {"id": "20814", "exportFilename": "Screenshot_2024-10-05_alle_13.49.20", "title": "", "caption" : ""},
+                         {"id": "20815", "exportFilename": "Screenshot_2024-10-05_alle_13.49.37", "title": "", "caption" : ""},
+                         {"id": "20816", "exportFilename": "Screenshot_2024-10-06_alle_17.12.48", "title": "", "caption" : ""},
+                         {"id": "20818", "exportFilename": "Screenshot_2024-10-06_alle_17.13.04", "title": "", "caption" : ""},
+                         {"id": "20819", "exportFilename": "Screenshot_2024-10-06_alle_17.13.12", "title": "", "caption" : ""},
+                         {"id": "20820", "exportFilename": "Screenshot_2024-10-06_alle_17.13.21", "title": "", "caption" : ""},
+                         {"id": "20821", "exportFilename": "Screenshot_2024-10-06_alle_17.13.29", "title": "", "caption" : ""},
+                         {"id": "20822", "exportFilename": "Screenshot_2024-10-06_alle_17.13.38", "title": "", "caption" : ""},
+                         {"id": "20823", "exportFilename": "Screenshot_2024-10-06_alle_17.13.46", "title": "", "caption" : ""},
+                         {"id": "20824", "exportFilename": "Screenshot_2024-10-06_alle_17.13.55", "title": "", "caption" : ""},
+                         {"id": "20825", "exportFilename": "Screenshot_2024-10-06_alle_17.14.02", "title": "", "caption" : ""},
+                         {"id": "20826", "exportFilename": "Screenshot_2024-10-06_alle_17.14.11", "title": "", "caption" : ""},
+                         {"id": "20827", "exportFilename": "Screenshot_2024-10-06_alle_17.14.18", "title": "", "caption" : ""},
+                         {"id": "20828", "exportFilename": "Screenshot_2024-10-06_alle_17.14.31", "title": "", "caption" : ""},
+                         {"id": "20829", "exportFilename": "Screenshot_2024-10-06_alle_17.14.39", "title": "", "caption" : ""},
+                         {"id": "20830", "exportFilename": "Screenshot_2024-10-06_alle_17.14.47", "title": "", "caption" : ""},
+                         {"id": "20831", "exportFilename": "Screenshot_2024-10-06_alle_17.14.56", "title": "", "caption" : ""},
+                         {"id": "20832", "exportFilename": "Screenshot_2024-10-06_alle_17.15.03", "title": "", "caption" : ""},
+                         {"id": "20833", "exportFilename": "Screenshot_2024-10-06_alle_17.15.33", "title": "", "caption" : ""},
+                         {"id": "20834", "exportFilename": "Screenshot_2024-10-06_alle_17.15.42", "title": "", "caption" : ""},
+                         {"id": "20835", "exportFilename": "Screenshot_2024-10-06_alle_17.15.53", "title": "", "caption" : ""},
+                         {"id": "20836", "exportFilename": "Screenshot_2024-10-06_alle_17.16.01", "title": "", "caption" : ""},
+                         {"id": "20837", "exportFilename": "Screenshot_2024-10-06_alle_17.16.12", "title": "", "caption" : ""},
+                         {"id": "20838", "exportFilename": "Screenshot_2024-10-06_alle_17.16.23", "title": "", "caption" : ""},
+                         {"id": "20839", "exportFilename": "Screenshot_2024-10-06_alle_17.16.31", "title": "", "caption" : ""},
+                         {"id": "20840", "exportFilename": "Screenshot_2024-10-06_alle_17.16.40", "title": "", "caption" : ""},
+                         {"id": "20841", "exportFilename": "Screenshot_2024-10-06_alle_17.16.51", "title": "", "caption" : ""},
+                         {"id": "20843", "exportFilename": "Screenshot_2024-10-06_alle_17.19.13", "title": "", "caption" : ""},
+                         {"id": "20844", "exportFilename": "Screenshot_2024-10-06_alle_17.19.47", "title": "", "caption" : ""},
+                         {"id": "20845", "exportFilename": "Screenshot_2024-10-06_alle_17.20.28", "title": "", "caption" : ""},
+                         {"id": "20846", "exportFilename": "Screenshot_2024-10-06_alle_17.21.11", "title": "", "caption" : ""},
+                         {"id": "20847", "exportFilename": "SkylerBurtFoodPhotography0012", "title": "", "caption" : ""},
+                         {"id": "20848", "exportFilename": "Seafood", "title": "", "caption" : ""},
+                         {"id": "20849", "exportFilename": "Southern-Living-Super-Bowl-Recipes0074", "title": "", "caption" : ""},
+                         {"id": "20850", "exportFilename": "Screenshot_2024-10-06_alle_17.50.16", "title": "", "caption" : ""},
+                         {"id": "20853", "exportFilename": "Screenshot_2024-10-06_alle_17.51.22", "title": "", "caption" : ""},
+                         {"id": "20854", "exportFilename": "Screenshot_2024-10-06_alle_17.51.31", "title": "", "caption" : ""},
+                         {"id": "20855", "exportFilename": "Screenshot_2024-10-06_alle_17.51.40", "title": "", "caption" : ""},
+                         {"id": "20856", "exportFilename": "Screenshot_2024-10-06_alle_17.51.56", "title": "", "caption" : ""},
+                         {"id": "20857", "exportFilename": "Screenshot_2024-10-06_alle_17.52.07", "title": "", "caption" : ""},
+                         {"id": "20858", "exportFilename": "Screenshot_2024-10-06_alle_17.52.17", "title": "", "caption" : ""},
+                         {"id": "20859", "exportFilename": "Screenshot_2024-10-06_alle_17.52.37", "title": "", "caption" : ""},
+                         {"id": "20860", "exportFilename": "Screenshot_2024-10-06_alle_17.52.51", "title": "", "caption" : ""},
+                         {"id": "20861", "exportFilename": "Screenshot_2024-10-06_alle_17.53.06", "title": "", "caption" : ""},
+                         {"id": "20862", "exportFilename": "Screenshot_2024-10-06_alle_17.54.08", "title": "", "caption" : ""},
+                         {"id": "20863", "exportFilename": "Screenshot_2024-10-06_alle_17.54.31", "title": "", "caption" : ""},
+                         {"id": "20864", "exportFilename": "Screenshot_2024-10-06_alle_17.55.13", "title": "", "caption" : ""},
+                         {"id": "20886", "exportFilename": "Screenshot_2024-10-06_alle_18.12.40", "title": "", "caption" : ""},
+                         {"id": "20888", "exportFilename": "Screenshot_2024-10-06_alle_18.13.05", "title": "", "caption" : ""},
+                         {"id": "20889", "exportFilename": "Screenshot_2024-10-06_alle_18.13.33", "title": "", "caption" : ""},
+                         {"id": "20891", "exportFilename": "Screenshot_2024-10-06_alle_18.14.22", "title": "", "caption" : ""},
+                         {"id": "20892", "exportFilename": "Screenshot_2024-10-06_alle_18.14.46", "title": "", "caption" : ""},
+                         {"id": "20893", "exportFilename": "Screenshot_2024-10-06_alle_18.14.55", "title": "", "caption" : ""},
+                         {"id": "20894", "exportFilename": "Screenshot_2024-10-06_alle_18.15.08", "title": "", "caption" : ""},
+                         {"id": "48655", "exportFilename": "Screenshot_2024-10-07_alle_12.44.45", "title": "", "caption" : ""},
+                         {"id": "48656", "exportFilename": "Screenshot_2024-10-07_alle_12.45.04", "title": "", "caption" : ""},
+                         {"id": "48657", "exportFilename": "Screenshot_2024-10-07_alle_12.45.14", "title": "", "caption" : ""},
+                         {"id": "48658", "exportFilename": "Screenshot_2024-10-07_alle_12.45.22", "title": "", "caption" : ""},
+                         {"id": "48659", "exportFilename": "Screenshot_2024-10-07_alle_12.45.31", "title": "", "caption" : ""},
+                         {"id": "48660", "exportFilename": "Screenshot_2024-10-07_alle_12.45.38", "title": "", "caption" : ""},
+                         {"id": "48663", "exportFilename": "Screenshot_2024-10-07_alle_12.46.19", "title": "", "caption" : ""},
+                         {"id": "48666", "exportFilename": "Screenshot_2024-10-07_alle_14.16.22", "title": "", "caption" : ""},
+                         {"id": "48669", "exportFilename": "Screenshot_2024-10-07_alle_14.18.19", "title": "", "caption" : ""},
+                         {"id": "48670", "exportFilename": "Screenshot_2024-10-07_alle_14.18.32", "title": "", "caption" : ""},
+                         {"id": "48671", "exportFilename": "Screenshot_2024-10-07_alle_14.18.42", "title": "", "caption" : ""},
+                         {"id": "48675", "exportFilename": "Screenshot_2024-10-07_alle_14.29.09", "title": "", "caption" : ""},
+                         {"id": "48676", "exportFilename": "Screenshot_2024-10-07_alle_14.29.23", "title": "", "caption" : ""},
+                         {"id": "48677", "exportFilename": "Screenshot_2024-10-07_alle_14.29.48", "title": "", "caption" : ""},
+                         {"id": "48697", "exportFilename": "Screenshot_2024-10-07_alle_14.35.21", "title": "", "caption" : ""},
+                         {"id": "48698", "exportFilename": "Screenshot_2024-10-07_alle_14.36.16", "title": "", "caption" : ""},
+                         {"id": "48699", "exportFilename": "Screenshot_2024-10-07_alle_14.36.58", "title": "", "caption" : ""},
+                         {"id": "48700", "exportFilename": "Screenshot_2024-10-07_alle_14.37.11", "title": "", "caption" : ""},
+                         {"id": "48701", "exportFilename": "Screenshot_2024-10-07_alle_14.37.24", "title": "", "caption" : ""},
+                         {"id": "48702", "exportFilename": "Screenshot_2024-10-07_alle_14.37.31", "title": "", "caption" : ""},
+                         {"id": "48703", "exportFilename": "Screenshot_2024-10-07_alle_14.37.41", "title": "", "caption" : ""},
+                         {"id": "48704", "exportFilename": "Screenshot_2024-10-07_alle_14.37.56", "title": "", "caption" : ""},
+                         {"id": "48705", "exportFilename": "Screenshot_2024-10-07_alle_14.38.08", "title": "", "caption" : ""},
+                         {"id": "48706", "exportFilename": "Screenshot_2024-10-07_alle_14.38.18", "title": "", "caption" : ""},
+                         {"id": "48707", "exportFilename": "Screenshot_2024-10-07_alle_14.38.29", "title": "", "caption" : ""},
+                         {"id": "48708", "exportFilename": "Screenshot_2024-10-07_alle_14.38.36", "title": "", "caption" : ""},
+                         {"id": "48709", "exportFilename": "Screenshot_2024-10-07_alle_14.38.51", "title": "", "caption" : ""},
+                         {"id": "48710", "exportFilename": "Screenshot_2024-10-07_alle_14.39.04", "title": "", "caption" : ""},
+                         {"id": "48711", "exportFilename": "Screenshot_2024-10-07_alle_14.39.11", "title": "", "caption" : ""},
+                         {"id": "48712", "exportFilename": "Screenshot_2024-10-07_alle_14.39.17", "title": "", "caption" : ""},
+                         {"id": "48713", "exportFilename": "Screenshot_2024-10-07_alle_14.39.28", "title": "", "caption" : ""},
+                         {"id": "48714", "exportFilename": "Screenshot_2024-10-07_alle_14.39.54", "title": "", "caption" : ""},
+                         {"id": "48715", "exportFilename": "Screenshot_2024-10-07_alle_14.40.02", "title": "", "caption" : ""},
+                         {"id": "48716", "exportFilename": "Screenshot_2024-10-07_alle_14.40.14", "title": "", "caption" : ""},
+                         {"id": "48717", "exportFilename": "Screenshot_2024-10-07_alle_14.40.43", "title": "", "caption" : ""},
+                         {"id": "48718", "exportFilename": "Screenshot_2024-10-07_alle_14.41.11", "title": "", "caption" : ""},
+                         {"id": "48719", "exportFilename": "Screenshot_2024-10-07_alle_14.41.20", "title": "", "caption" : ""},
+                         {"id": "48720", "exportFilename": "Screenshot_2024-10-07_alle_14.41.30", "title": "", "caption" : ""},
+                         {"id": "48721", "exportFilename": "Screenshot_2024-10-07_alle_14.41.40", "title": "", "caption" : ""},
+                         {"id": "48722", "exportFilename": "Screenshot_2024-10-07_alle_14.41.51", "title": "", "caption" : ""},
+                         {"id": "48723", "exportFilename": "Screenshot_2024-10-07_alle_14.42.07", "title": "", "caption" : ""},
+                         {"id": "48724", "exportFilename": "Screenshot_2024-10-07_alle_14.42.40", "title": "", "caption" : ""},
+                         {"id": "48725", "exportFilename": "Screenshot_2024-10-07_alle_14.42.58", "title": "", "caption" : ""},
+                         {"id": "48726", "exportFilename": "BARILLA101370_Test10_RGB-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48727", "exportFilename": "spizzicoAlpina-scaled-1200x823", "title": "", "caption" : ""},
+                         {"id": "48728", "exportFilename": "JUMPING_BURGER2198_Test21_Taglio_CMYK29X39-scaled-1200x1611", "title": "", "caption" : ""},
+                         {"id": "48732", "exportFilename": "Mc_MySelection106719_mod_Test8_CMYK_Def_50-1200x900", "title": "", "caption" : ""},
+                         {"id": "48733", "exportFilename": "MySelection72087_Test16_RGB_Linea_Orizzonte_mod_Def-1200x900", "title": "", "caption" : ""},
+                         {"id": "48734", "exportFilename": "MySelection45779_Test11_RIDUZIONE_CMYK_LOCANDINA_Def-copia-1200x1600", "title": "", "caption" : ""},
+                         {"id": "48736", "exportFilename": "McChicken84673_Test5_CMYK_Def-1200x675", "title": "", "caption" : ""},
+                         {"id": "48744", "exportFilename": "McBigTasty57294_TAGLIATO-1200x600", "title": "", "caption" : ""},
+                         {"id": "48745", "exportFilename": "Mc_BEST_BURGER88104_mod_Test7_CMYK_Def-1200x1601", "title": "", "caption" : ""},
+                         {"id": "48747", "exportFilename": "EstaThe_STILL_LIFE59961_Test4-copia-scaled-1200x1200", "title": "", "caption" : ""},
+                         {"id": "48751", "exportFilename": "Copy_of_02_Pret_Programmatic_Transit_Hubs_1080x1440_9_19_2022-10_9_2022", "title": "", "caption" : ""},
+                         {"id": "48755", "exportFilename": "Screenshot_2024-10-08_alle_11.24.39", "title": "", "caption" : ""},
+                         {"id": "48758", "exportFilename": "Screenshot_2024-10-08_alle_11.25.07", "title": "", "caption" : ""},
+                         {"id": "48764", "exportFilename": "Screenshot_2024-10-08_alle_11.26.35", "title": "", "caption" : ""},
+                         {"id": "48766", "exportFilename": "Screenshot_2024-10-08_alle_11.26.48", "title": "", "caption" : ""},
+                         {"id": "48767", "exportFilename": "Screenshot_2024-10-08_alle_11.26.57", "title": "", "caption" : ""},
+                         {"id": "48768", "exportFilename": "Screenshot_2024-10-08_alle_11.27.10", "title": "", "caption" : ""},
+                         {"id": "48769", "exportFilename": "Screenshot_2024-10-08_alle_11.27.18", "title": "", "caption" : ""},
+                         {"id": "48771", "exportFilename": "Screenshot_2024-10-08_alle_11.27.33", "title": "", "caption" : ""},
+                         {"id": "48773", "exportFilename": "Screenshot_2024-10-08_alle_11.27.58", "title": "", "caption" : ""},
+                         {"id": "48774", "exportFilename": "Screenshot_2024-10-08_alle_11.28.11", "title": "", "caption" : ""},
+                         {"id": "48781", "exportFilename": "Screenshot_2024-10-08_alle_11.29.38", "title": "", "caption" : ""},
+                         {"id": "48782", "exportFilename": "Screenshot_2024-10-08_alle_11.29.45", "title": "", "caption" : ""},
+                         {"id": "48783", "exportFilename": "Screenshot_2024-10-08_alle_11.29.55", "title": "", "caption" : ""},
+                         {"id": "48785", "exportFilename": "Screenshot_2024-10-08_alle_11.30.11", "title": "", "caption" : ""},
+                         {"id": "48786", "exportFilename": "Screenshot_2024-10-08_alle_11.30.20", "title": "", "caption" : ""},
+                         {"id": "48787", "exportFilename": "Screenshot_2024-10-08_alle_11.30.28", "title": "", "caption" : ""},
+                         {"id": "48788", "exportFilename": "Screenshot_2024-10-08_alle_11.30.40", "title": "", "caption" : ""},
+                         {"id": "48789", "exportFilename": "Screenshot_2024-10-08_alle_11.30.58", "title": "", "caption" : ""},
+                         {"id": "48791", "exportFilename": "Screenshot_2024-10-08_alle_11.31.18", "title": "", "caption" : ""},
+                         {"id": "48792", "exportFilename": "Screenshot_2024-10-08_alle_11.31.33", "title": "", "caption" : ""},
+                         {"id": "48793", "exportFilename": "Screenshot_2024-10-08_alle_11.31.42", "title": "", "caption" : ""},
+                         {"id": "48794", "exportFilename": "Screenshot_2024-10-08_alle_11.32.03", "title": "", "caption" : ""},
+                         {"id": "48795", "exportFilename": "Screenshot_2024-10-08_alle_11.32.15", "title": "", "caption" : ""},
+                         {"id": "48796", "exportFilename": "Screenshot_2024-10-08_alle_11.32.32", "title": "", "caption" : ""},
+                         {"id": "48797", "exportFilename": "HR_345_0317_ANDREAFEDERICIPHOTO-X4", "title": "", "caption" : ""},
+                                    ]        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
