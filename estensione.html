@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="home.css">
+    
+     
+     <title>Fuori Cornice - Fotografiamo il cibo o i pregiudizi?</title>
+     <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90vw;
+            height: 80vh;
+            margin: 50px auto;
+        }
+
+
+        .slider-container {
+            width: 50%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 120%;
+        }
+
+        .slide {
+            min-width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .text-container {
+            width: 45%;
+            padding: 40px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            margin-left: 5%;
+            margin-top: 150px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-button {
+            cursor: pointer;
+            padding: 10px;
+            margin: 5px;
+            background-color: #ddd;
+            border: none;
+        }
+    </style>
+     <body>
+        <header>
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <a href="index.html" class="home-link">
+                <img src="icona home-08-08-08.png" alt="Home" class="home-icon">
+            </a>
+            <img src="frame-10.png" alt="FRAME - Fotografiamo il cibo o i pregiudizi?" class="header-title">
+            <a href="esplora archivio.html" class="archive-link">
+                <div class="button-container">
+                    <img src="FRECCIA ICONA-09.png" alt="Freccia" class="arrow-icon"> ARCHIVIO 
+                </div>
+            </a>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </header>
+
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide"><img src="mockup 1.png" alt="Estratto 1"></div>
+                    <div class="slide"><img src="mockup 2.png" alt="Estratto 2"></div>
+                    <div class="slide"><img src="mockup 4.png" alt="Estratto 3"></div>
+                </div>
+                <div class="navigation">
+                    <button class="nav-button" onclick="prevSlide()">&#10094;</button>
+                    <button class="nav-button" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+            <div class="text-container">
+                <h2>FUORI CORNICE</h2>
+                <br> 
+                <p><strong>Fuori Cornice</strong> Fuori Cornice è un magazine indipendente che nasce con l’obiettivo di esplorare il ruolo delle immagini nella cultura contemporanea, interrogandosi su come influenzino la percezione della realtà e sulle loro implicazioni sociali ed etiche.
+                    Viviamo in un’epoca in cui le immagini non si limitano a documentare o decorare, ma plasmano il nostro modo di vedere e comprendere il mondo. Fuori Cornice si propone di analizzare questi meccanismi, mettendo in discussione ciò che solitamente viene accettato senza essere interrogato. Ogni numero affronta un tema specifico legato alla cultura visiva e alle sue connessioni con le grandi questioni etico-sociali, indagando fenomeni come la manipolazione digitale, la rappresentazione di genere e il potere della narrazione visiva.
+                    </p>
+                    <br>
+                    <h3>N.1 Fotografiamo il cibo o i pregiudizi?</h3>
+                    <br>
+                <p><em>"Fotografiamo il cibo o i pregiudizi?"</em>, il primo numero, inaugura questo percorso, concentrandosi sulla food photography e sul modo in cui essa contribuisce alla costruzione di stereotipi di genere. Esso rappresenta il punto di convergenza di un percorso di ricerca che ha indagato come la food photography possa rafforzare stereotipi di genere attraverso le immagini. Il progetto rielabora alcune sperimentazioni condotte e attraverso immagini, dati e narrazione visiva, stimola una lettura più consapevole di questo fenomeno.
+                    Il magazine non si limita a presentare i risultati dell’analisi, ma li traduce in un’esperienza visiva, invitando a riflettere sul ruolo delle immagini nella cultura contemporanea. Il cibo, infatti, non è mai solo cibo: è rappresentazione, simbolo, linguaggio. E la fotografia è il mezzo attraverso cui queste connessioni si consolidano o si mettono in discussione.
+                    </p>
+            </div>
+        </div>
+        
+        <script>
+            let currentIndex = 0;
+    
+            function showSlide(index) {
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+                if (index >= slides.length) currentIndex = 0;
+                else if (index < 0) currentIndex = slides.length - 1;
+                else currentIndex = index;
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+    
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+    
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+        </script>
+    </body>
+    </html>

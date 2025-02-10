@@ -104,7 +104,9 @@ header {
     height: auto;
     margin-left: 2px; /* Sposta l'icona a destra del testo */
 }
-        .logo {
+
+
+.logo {
             font-size: 24px;
             font-weight: bold;
         }
