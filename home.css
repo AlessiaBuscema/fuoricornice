@@ -102,7 +102,8 @@ header {
 .arrow-icon {
     width: 16px;
     height: auto;
-    margin-left: 2px; /* Sposta l'icona a destra del testo */
+    margin-left: 2px;
+    margin-right: 3px; /* Sposta l'icona a destra del testo */
 }
 
 
@@ -531,12 +532,14 @@ header {
         align-items: center; /* Centriamo gli elementi */
         height: auto; /* Altezza adattabile */
         padding-bottom: 0px !important; /*
+    
     }
 
     /* Riduciamo l'icona home */
     .home-link .home-icon {
         width: 30px; /* Rimpiccioliamo l'icona */
         height: auto;
+        margin-top: 15px;
     }
 
     /* Riduciamo la dimensione del pulsante ARCHIVIO e lo centriamo */
@@ -550,9 +553,9 @@ header {
         border: 1px solid white; /* Manteniamo il bordo */
         border-radius: 5px;
         background: transparent; /* Nessun riempimento */
-        margin-top: 5px auto 0 auto; /* Riduciamo il margine superiore */
-    }
+        margin-top: -7px;
 
+    }
     .arrow-icon {
         width: 12px; /* Rimpiccioliamo l'icona della freccia */
         height: auto;
@@ -563,8 +566,8 @@ header {
     .header-title {
         height: 70px; /* Riduciamo l'altezza per adattarlo al mobile */
         max-width: 100%; /* Evitiamo che si allarghi troppo */
-        margin: 5px 0;
-        margin-bottom: 5px !important; /* Riduciamo lo spazio sotto la scritta FRAME */
+        margin: 3px 0;
+        margin-bottom: 3px !important; /* Riduciamo lo spazio sotto la scritta FRAME */
     }
     }
 
@@ -575,15 +578,32 @@ header {
         display: none;
     }
 
-@media screen and (max-width: 768px) {
-    .home-image {
-        width: 80%; /* Larghezza massima per occupare tutto lo spazio */
-        max-width: 400px; /* Impedisce che diventi troppo grande */
-        height: auto;
-        object-fit: contain; /* Evita distorsioni */
-        margin: 20px auto; /* Centriamo l'immagine */
+    @media screen and (max-width: 768px) {
+        .intro-content {
+            flex-direction: column; /* Imposta il layout in colonna */
+            align-items: center; /* Centra gli elementi */
+            gap: 20px; /* Spazio tra testo e immagine */
+            margin-top: 50px; /* Abbassa tutto il contenuto */
+        }
+    
+        .text-svg {
+            width: 70%;
+            max-width: 300px;
+            text-align: center; 
+            margin-top: 30px;
+            margin-left: 15%; /* Sposta la scritta a destra */
+        }
+    
+        .cover-image {
+            width: 80%;
+            max-width: 350px;
+        }
+    
+        /* Nascondi la cornice nella versione mobile */
+        .frame {
+            display: none;
+        }
     }
-}
 @media screen and (max-width: 768px) {
     .grid-image {
         width: 100vw; /* Riempi la larghezza dello schermo */
@@ -596,6 +616,9 @@ header {
         padding: 8px;
     }
 }
+
+
+/* ESPLORA ARCHIVIO */
 @media screen and (max-width: 768px) {
     .gallery-container {
         display: flex;
@@ -604,7 +627,7 @@ header {
         justify-content: center; /* Centra gli elementi verticalmente */
         gap: 15px; /* Spazio tra le immagini */
         width: 100%; /* Assicura che il container prenda tutta la larghezza */
-        margin-top: 120px; 
+        margin-top: 90px; 
     }
 
 
@@ -650,7 +673,72 @@ header {
         height: auto;
         object-fit: cover;
     }
-
-
-}
-}
+    @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between; /* Separa gli elementi tra alto e basso */
+                align-items: center;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.4); /* Oscura leggermente l'immagine */
+            }
+        
+            /* Posizioniamo la scritta "TUTTE" in alto a sinistra */
+            .label {
+                font-size: 12px;
+                font-weight:300;
+                padding: 5px 10px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                align-self: flex-start; /* La spinge a sinistra */
+                margin-left: 55px; /* Margine dal bordo sinistro */
+                margin-top: 10px; /* Margine dal bordo superiore */
+            }
+        
+            /* Posizioniamo la freccia in alto a destra */
+            .circle-arrow {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 10px; /* Distanza dal bordo superiore */
+                right: 10px; /* Distanza dal bordo destro */
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 30px;
+            }
+        
+            .description {
+                font-size: 12px; /* Riduce la dimensione della descrizione */
+                text-align: center;
+                line-height: 1.2;
+                margin-bottom: 25px; /* Sposta più in basso */
+            }
+            .gallery-item.femminile .overlay {
+                background: rgba(166, 0, 255, 0.4); /* Viola trasparente */
+            }
+        
+            .gallery-item.maschile .overlay {
+                background: rgba(252, 130, 0, 0.4); /* Arancione trasparente */
+            }
+            @media screen and (max-width: 768px) {
+                /* Colore predefinito per la freccia nel riquadro femminile */
+                .circle-arrow.femminile {
+                    background: #a600ff; /* Viola */
+                    color: white;
+                }
+            
+                /* Colore predefinito per la freccia nel riquadro maschile */
+                .circle-arrow.maschile {
+                    background: #fc8200; /* Arancione */
+                    color: white;
+                }
+            }        

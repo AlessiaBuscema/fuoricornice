@@ -34,6 +34,15 @@
         </header>
         <div class="filter-container">
             <div class="filter-title">FOTOGRAFIE SCATTATE DAL GENERE MASCHILE</div>
+    
+            <!-- Menu Burger -->
+            <div class="menu-burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <!-- Filtri (inizialmente nascosti su mobile) -->
             <div class="filter-buttons">
                 <a href="uomo tutti.html" class="filter-button active-men">TUTTE</a>
                 <a href="uomo salutare.html" class="filter-button">PIATTI SALUTARI</a>
@@ -648,6 +657,11 @@
                          {"id": "48798", "exportFilename": "COLONNA_GR_128_1217_ANDREAFEDERICIPHOTO-X3", "title": "", "caption" : ""},
                                     ]        </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            function toggleMenu() {
+                document.querySelector(".filter-buttons").classList.toggle("active");
+            }
+        </script>
         <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="assets/js/main.js"></script>
     </body>

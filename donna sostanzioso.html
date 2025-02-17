@@ -31,6 +31,11 @@
             <div class="corner bottom-right"></div>
         </header>
         <div class="filter-container">
+            <div class="menu-burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="filter-title">FOTOGRAFIE SCATTATE DAL GENERE FEMMINILE</div>
             <div class="filter-buttons">
                 <a href="index.html" class="filter-button">TUTTE</a>
@@ -166,6 +171,11 @@
                          {"id": "21067", "exportFilename": "Piatti_Veal_Braciolini_Hero", "title": "", "caption" : ""},
                                     ]        </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            function toggleMenu() {
+                document.querySelector(".filter-buttons").classList.toggle("active");
+            }
+        </script>
         <script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="assets/js/main.js"></script>
     </body>

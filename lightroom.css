@@ -1,3 +1,7 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
 
 body{
     margin-top: 150px;
@@ -143,3 +147,122 @@ header {
 .active-women {
     background-color: rgb(128, 0, 207);
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 6px 15px; /* Riduciamo il padding */
+        flex-direction: column; /* Disposizione verticale */
+        align-items: center; /* Centriamo gli elementi */
+        height: auto; /* Altezza adattabile */
+        padding-bottom: 0px !important; /*
+    
+    }
+
+    /* Riduciamo l'icona home */
+    .home-link .home-icon {
+        width: 30px; /* Rimpiccioliamo l'icona */
+        height: auto;
+        margin-top: 15px;
+    }
+
+    /* Riduciamo la dimensione del pulsante ARCHIVIO e lo centriamo */
+    .button-container {
+        font-size: 12px; /* Riduciamo la dimensione del testo */
+        padding: 5px 8px; /* Riduciamo il padding */
+        width: fit-content; /* Adatta la larghezza al contenuto */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid white; /* Manteniamo il bordo */
+        border-radius: 5px;
+        background: transparent; /* Nessun riempimento */
+        margin-top: -7px;
+
+    }
+
+    .arrow-icon {
+        width: 12px; /* Rimpiccioliamo l'icona della freccia */
+        height: auto;
+        margin-right: 3px; /* Manteniamo un po' di spazio tra icona e testo */
+    }
+
+    /* Riduciamo l'immagine del titolo */
+    .header-title {
+        height: 70px; /* Riduciamo l'altezza per adattarlo al mobile */
+        max-width: 100%; /* Evitiamo che si allarghi troppo */
+        margin: 5px 0;
+        margin-bottom: 5px !important; /* Riduciamo lo spazio sotto la scritta FRAME */
+    }
+    }
+
+    .corner {
+        display: none; /* Nascondiamo gli angoli bianchi per evitare ingombro */
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+        .filter-container {
+            margin-top: 50px; /* Sposta in basso i filtri */
+        }
+    
+        .gallery-container {
+            margin-top: 30px; /* Aggiunge spazio tra il titolo e le foto */
+        }
+    }
+@media screen and (max-width: 768px) {
+    .filter-buttons {
+        display: none; /* Nasconde i filtri normali */
+        flex-direction: column;
+        position: absolute;
+        top: 220px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .filter-buttons a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Mostra il menu quando attivo */
+    .filter-buttons.active {
+        display: flex;
+    }
+
+    /* Stile del menu Burger */
+    .menu-burger {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+      
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        margin-top: 160px;
+    }
+
+    .menu-burger span {
+        display: block;
+        background: rgb(255, 255, 255);
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+    }
+}    .filter-title {
+    font-size: 11px; /* Riduciamo il font */
+
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+
