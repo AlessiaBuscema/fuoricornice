@@ -575,8 +575,14 @@ header {
         display: none; /* Nascondiamo gli angoli bianchi per evitare ingombro */
     }
     #intro {
-        display: none;
+        display: none !important;
+        visibility: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
     }
+}
 
     @media screen and (max-width: 768px) {
         .intro-content {

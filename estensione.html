@@ -1,28 +1,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="home.css">
     
      
      <title>Fuori Cornice - Fotografiamo il cibo o i pregiudizi?</title>
      <style>
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 90vw;
-            height: 80vh;
-            margin: 50px auto;
-        }
 
+html, body {
+    overflow-x: hidden; /* Evita lo scroll orizzontale indesiderato */
+    overflow-y: auto; /* Abilita lo scroll verticale */
+    height: 100%; /* Mantiene altezza corretta */
+}
+    .container {
+    display: flex;
+    align-items: flex-start; /* Allinea in alto */
+    justify-content: center;
+    flex-direction: row;
+    max-width: 90vw;
+    height: auto;
+    margin: 50px auto;
+    overflow: visible; 
+    min-height: 100vh;
+    margin-left: 15px;
+    overflow-y: scroll; /* Forza lo scrolling verticale */
+        max-height: 400px; /* Imposta un'altezza massima per evitare che scompaia */
+        display: block;
+    
+}
 
         .slider-container {
-            width: 50%;
-            overflow: hidden;
-            position: relative;
-        }
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%; /* Sposta tutto leggermente a destra */
+    margin-top: 30px;
+}
+
+.navigation {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Mette le frecce ai lati delle immagini */
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding: 0 10px; /* Margine per evitare che tocchino i bordi */
+}
 
         .slider {
             display: flex;
@@ -41,34 +70,92 @@
         }
 
         .text-container {
-            width: 45%;
-            padding: 40px;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            margin-left: 5%;
-            margin-top: 150px;
-        }
+    width: 50%; /* Aumenta la larghezza, per esempio a 55% o 60% */
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin-left: 2%; /* Riduci il margine sinistro se necessario */
+    margin-top: 40px; /* Abbassa il testo */
+    font-size: 0.9em;
+    line-height: 1.8;
+}
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        
 
         .nav-button {
             cursor: pointer;
+            color: aliceblue;
             padding: 10px;
             margin: 5px;
-            background-color: #ddd;
+            background-color: #000000;
             border: none;
         }
+
+        @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 100px;
+    }
+    .slider-container {
+        width: 100%; 
+        max-width: 90vw; 
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 300%; /* Evita che le immagini si affianchino su schermi piccoli */
+    }
+
+    .slide {
+        min-width: 100%; 
+        box-sizing: border-box;
+    }
+
+    .slide img {
+        width: 100%; 
+        height: auto; 
+        object-fit: contain;
+        display: block;
+    }
+
+
+
+    .text-container {
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+        overflow-y: auto;
+        max-height: 300px;
+        margin-top: 10px;
+        
+    }
+    .navigation {
+        position: absolute; /* Posiziona i bottoni sopra l'immagine */
+        display: flex;
+        justify-content: space-between; /* Bottoni ai lati */
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 10px; /* Spazio per evitare che tocchino i bordi */
+        z-index: 3; /* I bottoni sono sopra le immagini */
+    }
+
+    .nav-button {
+        padding: 10px;
+        font-size: 1em; /* Riduce la dimensione dei bottoni */
+        background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo semitrasparente */
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%; /* Bottoni rotondi */
+    }
+}
     </style>
      <body>
         <header>
@@ -100,9 +187,9 @@
                 </div>
             </div>
             <div class="text-container">
-                <h2>FUORI CORNICE</h2>
+                
                 <br> 
-                <p><strong>Fuori Cornice</strong> Fuori Cornice è un magazine indipendente che nasce con l’obiettivo di esplorare il ruolo delle immagini nella cultura contemporanea, interrogandosi su come influenzino la percezione della realtà e sulle loro implicazioni sociali ed etiche.
+                <p> Fuori Cornice è un magazine indipendente che nasce con l’obiettivo di esplorare il ruolo delle immagini nella cultura contemporanea, interrogandosi su come influenzino la percezione della realtà e sulle loro implicazioni sociali ed etiche.
                     Viviamo in un’epoca in cui le immagini non si limitano a documentare o decorare, ma plasmano il nostro modo di vedere e comprendere il mondo. Fuori Cornice si propone di analizzare questi meccanismi, mettendo in discussione ciò che solitamente viene accettato senza essere interrogato. Ogni numero affronta un tema specifico legato alla cultura visiva e alle sue connessioni con le grandi questioni etico-sociali, indagando fenomeni come la manipolazione digitale, la rappresentazione di genere e il potere della narrazione visiva.
                     </p>
                     <br>
@@ -115,23 +202,31 @@
         </div>
         
         <script>
-            let currentIndex = 0;
-    
-            function showSlide(index) {
-                const slider = document.querySelector('.slider');
-                const slides = document.querySelectorAll('.slide');
-                if (index >= slides.length) currentIndex = 0;
-                else if (index < 0) currentIndex = slides.length - 1;
-                else currentIndex = index;
-                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            let currentIndex = 0; // Tiene traccia della slide attuale
+            const slides = document.querySelectorAll('.slide'); // Seleziona tutte le slide
+            const totalSlides = slides.length; // Conta il numero totale di slide
+            const slider = document.querySelector('.slider'); // Seleziona il contenitore delle slide
+        
+            function updateSlidePosition() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Sposta lo slider a sinistra
             }
-    
+        
             function nextSlide() {
-                showSlide(currentIndex + 1);
+                if (currentIndex < totalSlides - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0; // Torna alla prima slide dopo l'ultima
+                }
+                updateSlidePosition();
             }
-    
+        
             function prevSlide() {
-                showSlide(currentIndex - 1);
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = totalSlides - 1; // Torna all'ultima slide se è sulla prima
+                }
+                updateSlidePosition();
             }
         </script>
     </body>
