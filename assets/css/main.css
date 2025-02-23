@@ -364,6 +364,7 @@ div.thumbnail img {
     box-sizing: border-box;
     cursor: pointer;
     border-style: solid;
+    margin-top: 40px;
 }
 
 #loupeContainer {
