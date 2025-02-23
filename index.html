@@ -112,64 +112,84 @@
     
     <script>
         document.addEventListener("mousemove", (event) => {
-            let centerX = window.innerWidth / 2;
-            let centerY = window.innerHeight / 2;
-            let offsetX = (event.clientX - centerX) / 5;
-            let offsetY = (event.clientY - centerY) / 5;
+    let centerX = window.innerWidth / 2;
+    let centerY = window.innerHeight / 2;
+    let offsetX = (event.clientX - centerX) / 5;
+    let offsetY = (event.clientY - centerY) / 5;
 
-            // Definizione dei limiti per garantire la visibilità dell'header
-            let maxX = 250; // Maggiore libertà di movimento
-            let maxY = 400; // Mantiene visibile l'header
-            offsetX = Math.max(-maxX, Math.min(offsetX, maxX));
-            offsetY = Math.max(-maxY, Math.min(offsetY, maxY));
+    let maxX = 250;
+    let maxY = 400;
+    offsetX = Math.max(-maxX, Math.min(offsetX, maxX));
+    offsetY = Math.max(-maxY, Math.min(offsetY, maxY));
 
-            gsap.to(".frame", {
-                x: offsetX, 
-                y: offsetY,
-                duration: 0.5,
-                ease: "power2.out"
-            });
-        });
-    </script>
+    gsap.to(".frame", {
+        x: offsetX,
+        y: offsetY,
+        duration: 0.5,
+        ease: "power2.out"
+    });
+});
 
-    <script>
-        // Gestione del video e overlay
-        document.addEventListener("DOMContentLoaded", function () {
-            let video = document.getElementById("intro-video");
-            let intro = document.getElementById("intro");
-            let overlay = document.getElementById("overlay");
+// Gestione del video e overlay
+document.addEventListener("DOMContentLoaded", function () {
+    let video = document.getElementById("intro-video");
+    let intro = document.getElementById("intro");
+    let overlay = document.getElementById("overlay");
 
-            if (video) {
-                video.onended = function () {
-                    overlay.style.opacity = "1";
-                    setTimeout(() => {
-                        intro.style.display = "none";
-                        overlay.style.display = "none";
-                    }, 1000);
-                };
-            }
-        });
-    </script>
+    if (video) {
+        video.onended = function () {
+            overlay.style.opacity = "1";
+            setTimeout(() => {
+                intro.style.display = "none";
+                overlay.style.display = "none";
+            }, 1000);
+        };
+    }
+});
 
-    <script>
-        // Gestione dello scroll
-        window.addEventListener("wheel", function (event) {
+// Gestione dello scroll per PC e mobile
+function handleScroll(direction) {
     let firstContent = document.getElementById("main-content");
     let secondContent = document.getElementById("second-content");
     let button = document.getElementById("archive-button");
 
     if (firstContent && secondContent && button) {
-        if (event.deltaY > 0) { 
+        if (direction === "down") {
             firstContent.classList.add("hidden");
             secondContent.classList.add("visible");
             button.classList.add("visible");
-        } else { 
+        } else {
             firstContent.classList.remove("hidden");
             secondContent.classList.remove("visible");
             button.classList.remove("visible");
         }
     }
-        });
+}
+
+// Per il PC (mouse scroll)
+window.addEventListener("wheel", function (event) {
+    if (event.deltaY > 0) {
+        handleScroll("down");
+    } else {
+        handleScroll("up");
+    }
+});
+
+// Per il mobile (touch scroll)
+let touchStartY = 0;
+
+window.addEventListener("touchstart", function (event) {
+    touchStartY = event.touches[0].clientY;
+});
+
+window.addEventListener("touchmove", function (event) {
+    let touchEndY = event.touches[0].clientY;
+    if (touchStartY - touchEndY > 50) {
+        handleScroll("down"); // Scroll verso il basso
+    } else if (touchEndY - touchStartY > 50) {
+        handleScroll("up"); // Scroll verso l'alto
+    }
+});
     </script>
 </body>
 </html>
