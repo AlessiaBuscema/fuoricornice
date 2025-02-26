@@ -24,6 +24,7 @@ html, body {
     background-color: #000000;
     font-family: sans-serif;
    -webkit-font-smoothing: antialiased; 
+   overflow: auto;
 }
 
 body.loupe-active {
@@ -32,7 +33,7 @@ body.loupe-active {
 
 header {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     margin: 0;
@@ -55,13 +56,7 @@ header {
     max-width: 120%;
     margin-right: -100px; 
 }
-header.is-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-}
+
 
 header div.background {
     position: absolute;
@@ -364,7 +359,6 @@ div.thumbnail img {
     box-sizing: border-box;
     cursor: pointer;
     border-style: solid;
-    margin-top: 40px;
 }
 
 #loupeContainer {

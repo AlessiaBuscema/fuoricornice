@@ -14,22 +14,17 @@ html, body {
     overflow-y: auto; /* Abilita lo scroll verticale */
     height: 100%; /* Mantiene altezza corretta */
 }
-    .container {
-    display: flex;
+.container {
+    display: flex; /* Ritorna il layout a due colonne */
     align-items: flex-start; /* Allinea in alto */
-    justify-content: center;
-    flex-direction: row;
-    max-width: 90vw;
+    justify-content: space-between;
+    flex-direction: row; /* Evita che il testo vada sotto */
+    max-width: 95vw;
     height: auto;
     margin: 50px auto;
-    overflow: visible; 
-    min-height: 100vh;
-    margin-left: 15px;
-    overflow-y: scroll; /* Forza lo scrolling verticale */
-        max-height: 400px; /* Imposta un'altezza massima per evitare che scompaia */
-        display: block;
-    
-}
+    overflow: hidden; /* Evita scroll inutili */
+} 
+
 
         .slider-container {
     width: 50%;
@@ -69,18 +64,19 @@ html, body {
             object-fit: contain;
         }
 
-        .text-container {
-    width: 50%; /* Aumenta la larghezza, per esempio a 55% o 60% */
-    padding: 20px;
+      
+            .text-container {
+    width: 60%;
+    padding: 40px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Allinea in alto */
     height: 100%;
-    margin-left: 2%; /* Riduci il margine sinistro se necessario */
-    margin-top: 40px; /* Abbassa il testo */
-    font-size: 0.9em;
-    line-height: 1.8;
+    margin-left: 5%;
+    font-size: 0.9em; /* Riduce la dimensione del testo */
+    line-height: 1.8; /* Aumenta l'interlinea */
+    margin-top: 50px;
 }
 
         
@@ -94,16 +90,17 @@ html, body {
             border: none;
         }
 
-        @media (max-width: 768px) {
+    @media (max-width: 768px) {
     .container {
         flex-direction: column;
         height: auto;
-        margin-top: 100px;
+        margin-top: 130px;
     }
     .slider-container {
         width: 100%; 
         max-width: 90vw; 
         overflow: hidden;
+
     }
 
     .slider {
@@ -125,14 +122,14 @@ html, body {
     }
 
 
-
     .text-container {
         width: 100%;
         margin: 20px auto;
         padding: 20px;
         overflow-y: auto;
-        max-height: 300px;
-        margin-top: 10px;
+        max-height: 350px;
+        margin-top: 30px;
+        margin-left: 10px;
         
     }
     .navigation {
